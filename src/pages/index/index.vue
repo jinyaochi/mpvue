@@ -1,69 +1,67 @@
 <template>
-  <div @click="clickHandle">
+  <div id="box">
 
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
+    <map
+            id="map"
+            longitude="116.39987458203123"
+            latitude="39.90915359502086"
+            scale="14"
+            :markers="markers"
+            @markertap="markertap"
+            :polyline="polyline"
+            @begin="begin"
+            show-location
+    >
 
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
+      <cover-view class="controls">
+        <cover-view class="time">00:00</cover-view>
+      </cover-view>
 
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
+    </map>
 
-    <form class="form-container">
-      <input type="text" class="form-control" :value="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
-    <div class="all">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
-    </div>
   </div>
 </template>
 
 <script>
-import card from '@/components/card'
 
 export default {
   data () {
     return {
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/logo.png'
-      }
+      markers: [{
+        iconPath: '/static/images/jiantou.png',
+        id: 0,
+        callout: {
+          content: '123123sd',
+          display: 'ALWAYS'
+        },
+        longitude: 116.39987458203123,
+        latitude: 39.90915359502086,
+        width: 10,
+        height: 10
+      }],
+      polyline: [{
+        points: [{
+          longitude: 116.39987458203123,
+          latitude: 39.90915359502086
+        }, {
+          longitude: 116.42734040234373,
+          latitude: 39.878598176249206
+        }],
+        color: '#FF00DD',
+        width: 2,
+        dottedLine: true
+      }]
     }
   },
-
-  components: {
-    card
-  },
-
   methods: {
-    bindViewTap () {
-      const url = '../logs/main'
-      if (mpvuePlatform === 'wx') {
-        mpvue.switchTab({ url })
-      } else {
-        mpvue.navigateTo({ url })
-      }
+
+    begin ({timeStamp}) {
+      console.log('innnn')
     },
-    clickHandle (ev) {
-      console.log('clickHandle:', ev)
-      // throw {message: 'custom test'}
+    markertap (e) {
+      console.log(e)
     }
+
   },
 
   created () {
@@ -71,56 +69,35 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 150px;
-}
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-}
-.all{
-  width:7.5rem;
-  height:1rem;
-  background-color:blue;
-}
-.all:after{
-  display:block;
-  content:'';
-  clear:both;
-}
-.left{
-  float:left;
-  width:3rem;
-  height:1rem;
-  background-color:red;
-}
-
-.right{
-  float:left;
-  width:4.5rem;
-  height:1rem;
-  background-color:green;
-}
+<style>
+  page,#box{
+    height: 100%;
+  }
+  #map{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .controls {
+    position: relative;
+    top: 50%;
+    height: 50px;
+    margin-top: -25px;
+    display: flex;
+  }
+  .play,.pause,.time {
+    flex: 1;
+    height: 100%;
+  }
+  .time {
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    line-height: 50px;
+  }
+  .img {
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+  }
 </style>
