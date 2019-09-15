@@ -4,6 +4,7 @@
     <button open-type="contact">进入客服会话</button>
     <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
     <button open-type="openSetting">打开授权设置页</button>
+    <a href="/pages/map/main">打开地图</a>
 
   </div>
 </template>
