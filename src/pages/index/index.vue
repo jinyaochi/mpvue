@@ -14,30 +14,7 @@
 export default {
   data () {
     return {
-      markers: [{
-        iconPath: '/static/images/jiantou.png',
-        id: 0,
-        callout: {
-          content: '123123sd',
-          display: 'ALWAYS'
-        },
-        longitude: 116.39987458203123,
-        latitude: 39.90915359502086,
-        width: 10,
-        height: 10
-      }],
-      polyline: [{
-        points: [{
-          longitude: 116.39987458203123,
-          latitude: 39.90915359502086
-        }, {
-          longitude: 116.42734040234373,
-          latitude: 39.878598176249206
-        }],
-        color: '#FF00DD',
-        width: 2,
-        dottedLine: true
-      }]
+
     }
   },
   methods: {
