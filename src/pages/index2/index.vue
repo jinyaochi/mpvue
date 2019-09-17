@@ -3,7 +3,7 @@
     <div class="inContainer">
       <div class="subject clearfix mb-35">
         <a class="image mt-10 mb-20" href="">
-          <img src="../images/index-img1.jpg" width="100%" height="100%" mode="widthFix"/>
+          <img src="/static/images/index-img1.jpg" width="100%" height="100%" mode="widthFix"/>
         </a>
         <div class="font">
           <h1>单词记不住，会说不会写</h1>
@@ -14,15 +14,15 @@
           </div>
         </div>
         <div class="head-img">
-          <img src="../images/head-img1.png" mode="widthFix" alt="">
-          <img src="../images/head-img2.png" mode="widthFix" alt="">
-          <img src="../images/head-img3.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img2.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img3.png" mode="widthFix" alt="">
         </div>
 
       </div>
       <div class="subject clearfix mb-35">
         <a class="image mt-10 mb-20" href="">
-          <img src="../images/index-img2.jpg" width="100%" height="100%" mode="widthFix"/>
+          <img src="/static/images/index-img2.jpg" width="100%" height="100%" mode="widthFix"/>
         </a>
         <div class="font">
           <h1>单词记不住，会说不会写</h1>
@@ -33,15 +33,15 @@
           </div>
         </div>
         <div class="head-img">
-          <img src="../images/head-img1.png" mode="widthFix" alt="">
-          <img src="../images/head-img2.png" mode="widthFix" alt="">
-          <img src="../images/head-img3.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img2.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img3.png" mode="widthFix" alt="">
         </div>
 
       </div>
       <div class="subject clearfix mb-35">
         <a class="image mt-10 mb-20" href="">
-          <img src="../images/index-img3.jpg" width="100%" height="100%" mode="widthFix"/>
+          <img src="/static/images/index-img3.jpg" width="100%" height="100%" mode="widthFix"/>
         </a>
         <div class="font">
           <h1>单词记不住，会说不会写</h1>
@@ -52,9 +52,9 @@
           </div>
         </div>
         <div class="head-img">
-          <img src="../images/head-img1.png" mode="widthFix" alt="">
-          <img src="../images/head-img2.png" mode="widthFix" alt="">
-          <img src="../images/head-img3.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img2.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img3.png" mode="widthFix" alt="">
         </div>
 
       </div>

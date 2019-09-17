@@ -4,8 +4,8 @@
 .head-top{
   width:100%;
   height:600rpx;
-  background-image: url("../../pages/images/mine-back.jpg");
   background-size: 100% 600rpx;
+  background: url("/static/images/mine-back.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
