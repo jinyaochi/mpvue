@@ -1,0 +1,64 @@
+@import "public.css";
+
+.inContainer{
+  padding: 0 50rpx;
+  width: calc(100% - 100rpx)
+}
+.subject> .image > img{
+  width: 100%;
+  height:277rpx;
+  border-radius:16rpx;
+  box-shadow: 0 0 10rpx 2rpx rgba(0,0,0,0.4);
+}
+
+.subject .font{ width: 60%; float: left}
+.subject .font>h1{
+  font-size: 27rpx;
+  color:#333;
+}
+
+.subject .font>div>a{
+  display: inline-block;
+}
+.subject .head-img{
+  width: 40%;
+  float: left
+}
+.subject .head-img img{
+  float: right;
+  width: 62rpx;
+  height: 62rpx;
+  border-radius: 62rpx;
+  margin-left: 10rpx;
+}
+.subject .font>div span{
+  display: inline-block;
+  font-size: 19rpx;
+  color:#999;
+}
+.icon{
+  display: inline-block;
+  margin-left: 5rpx;
+  margin-right: 25rpx;
+  background-image: url("../../pages/images/zan.png");
+  background-repeat: no-repeat;
+}
+.love{
+  height: 20rpx;
+  width: 20rpx;
+  background-size:20rpx;
+  background-position:top 3rpx left 0rpx;
+}
+.good{
+  height: 20rpx;
+  width: 20rpx;
+  background-size:20rpx;
+  background-position:top -19rpx left 0rpx;
+}
+.look{
+  height: 20rpx;
+  width: 25rpx;
+  background-size:20rpx;
+  background-position:top -42rpx left 0rpx;
+}
+

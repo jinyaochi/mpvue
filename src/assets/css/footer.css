@@ -1,0 +1,47 @@
+
+/* nav */
+.nav{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 116rpx;
+  background: #fff;
+}
+.navContainer{
+  margin: 0 30rpx;
+  width: calc(100% - 60rpx)
+
+}
+.navContainer li{
+  float: left;
+  width: 25%;
+}
+
+.navContainer li div{
+  text-align: center;
+}
+.navContainer li i{
+  height: 45rpx;
+  display: inline-block;
+  width: 100%;
+}
+.footerIcon{
+  background-image: url("../../pages/images/footer-icon.png");
+  background-repeat: no-repeat;
+}
+.find{
+  background-size: 40rpx;
+  background-position: top 0rpx left 0;
+}
+.lineDown{
+  background-size: 40rpx;
+  background-position: top -30rpx left 0;
+}
+.lineUp{
+  background-size: 40rpx;
+  background-position: top -50rpx left 0;
+}
+.mine{
+  background-size: 40rpx;
+  background-position: top -70rpx left 0;
+}
