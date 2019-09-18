@@ -1,0 +1,56 @@
+@import "public.css";
+
+
+.head-top{
+  width:100%;
+  height:600rpx;
+  background-size: 100% 600rpx;
+  background: url("/static/images/mine-back.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.head-top>div img{
+  width: 160rpx;
+  height: 160rpx;
+  border: 15rpx;
+  border-radius:100%;
+}
+.head-top>div p{
+  margin-top:35rpx;
+  text-align: center;
+  font-size:27rpx;
+  color:#333333;
+}
+
+.mine-choose li{
+  height: 108rpx;
+  width: auto;
+  padding:0 88rpx;
+  background: #fff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.mine-choose li:nth-child(2n-1){
+  background:#f2f6f9;
+}
+.mine-choose li a{ width: 100%; display: inline-block; }
+.mine-choose li img{ width: 23rpx; height: 20rpx; margin-right: 32rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
