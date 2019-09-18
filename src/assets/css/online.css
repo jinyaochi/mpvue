@@ -1,12 +1,93 @@
 @import 'public.css';
+
+.online{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  flex-direction:column;
+  /*display:flex;
+  align-items:center;!*垂直居中*!
+  justify-content: center;!*水平居中*!*/
+  background: url("http://admin.qq.im/static/images/online-head.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.online-time{
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+  /*background: aquamarine;*/
+}
+.time1{ bottom:650rpx }
+.time2{ bottom:350rpx }
+.time3{ bottom:100rpx }
+
+.box{ position: relative; height: 500rpx; }
+
+.time1>.box>.one-body{
+  background: #ef9c3b;
+}
+.time3>.box>.one{
+  border-bottom:140rpx solid #ef9c3b;
+}
+.time2>.box>.one-body{
+  background: #ea6c06;
+}
+.time2>.box>.one{
+  border-bottom:140rpx solid #ea6c06;
+}
+.time3>.box>.one-body{
+  background: #2da1d4;
+}
+.time3>.box>.one{
+  border-bottom:140rpx solid #2da1d4;
+}
+.online-time .one{
+  width:0;
+  height:0;
+  border-right:375rpx solid transparent;  /*动态获取 宽度 */
+  border-left:375rpx solid transparent;
+  border-bottom:140rpx solid #ef9c3b;
+}
+.online-time .one-body{
+  width: 100%;
+  height: 380rpx;
+}
+.online-time> .font{
+  position: absolute;
+  width: 100%;
+  height: 350rpx;
+  color: #fff;
+  font-size: 27rpx;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-white{
+  background-image: url("http://admin.qq.im/static/images/zan-white.png");
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+/*
+
 .online-head{
   width: 100%;
   height: auto;
 }
 .online-time{
   position: relative;
-
 }
+.time1{ top:0rpx }
+.time2{ bottom:150rpx }
+.time3{ bottom:0 }
+
 .online-time> .font{
   position: absolute;
   width: 100%;
@@ -22,15 +103,15 @@
   position: relative;
 }
 .online-time .one{
- /* width: 100%;
+ !* width: 100%;
   height: 400rpx;
-  background:#ef9c3b;*/
+  background:#ef9c3b;*!
 
   position: absolute;
   top: -140rpx;
   width:0;
   height:0;
-  border-right:375rpx solid transparent; /* 动态获取 宽度 */
+  border-right:375rpx solid transparent; !* 动态获取 宽度 *!
   border-left:375rpx solid transparent;
   border-bottom:140rpx solid #ef9c3b;
 }
@@ -38,12 +119,13 @@
   width: 100%;
   height: 200rpx;
   background:#ef9c3b ;
-  margin-top: 140rpx;
+  !*margin-top: 140rpx;*!
 }
 .icon-white{
-  background-image: url("http://admin.qq.im/static/images/zan.png");
+  background-image: url("http://admin.qq.im/static/images/zan-white.png");
   background-repeat: no-repeat;
 }
 
 
+*/
 

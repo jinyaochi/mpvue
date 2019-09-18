@@ -4,6 +4,8 @@
     "pages/index2/main",
     "pages/mine/main",
     "pages/online/main",
+    "pages/sign/main",
+    "pages/sign-subscribe/main",
     "pages/counter/main",
     "pages/map/main"
   ],
