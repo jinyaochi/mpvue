@@ -3,6 +3,7 @@
     "pages/index/main",
     "pages/index2/main",
     "pages/mine/main",
+    "pages/online/main",
     "pages/counter/main",
     "pages/map/main"
   ],
