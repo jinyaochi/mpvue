@@ -33,28 +33,33 @@
         </a>
       </li>
     </ul>
+
+    <bottomnav></bottomnav>
   </div>
 
 </template>
 
 <script>
   import '@/assets/css/mine.css';
-
+  import bottomnav from '@/components/footer.vue';
 
 
   export default {
-  data () {
-    return {
 
+    data () {
+      return {
+
+      }
+    },
+    methods: {
+
+    },
+    components: {
+      bottomnav
+    },
+    created () {
+      // let app = getApp()
     }
-  },
-  methods: {
-
-  },
-
-  created () {
-    // let app = getApp()
   }
-}
 </script>
 

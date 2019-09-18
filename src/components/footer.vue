@@ -4,13 +4,13 @@
       <div style="height:116rpx"></div>
       <div class="nav">
         <ul class="navContainer bt-1">
-          <li>
+          <li class="footer-choose">
             <a href="">
               <i class="footerIcon find"></i>
               <div>发现</div>
             </a>
           </li>
-          <li class="footer-choose">
+          <li>
             <a href="">
               <i class="footerIcon lineDown"></i>
               <div>线下试听</div>
