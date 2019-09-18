@@ -7,6 +7,7 @@
     <a href="/pages/map/main">打开地图</a>
     <a href="/pages/index2/main">index2</a>
     <a href="/pages/mine/main">我的</a>
+    <a href="/pages/online/main">线上试听</a>
 
   </div>
 </template>
