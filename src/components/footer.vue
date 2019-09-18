@@ -10,7 +10,7 @@
               <div>发现</div>
             </a>
           </li>
-          <li>
+          <li class="footer-choose">
             <a href="">
               <i class="footerIcon lineDown"></i>
               <div>线下试听</div>

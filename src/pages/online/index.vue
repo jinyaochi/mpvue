@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div><img src='/static/images/online-head.jpg' alt="" width="100%" mode="widthFix"></div>
+    <div class="online-head"><img src='/static/images/online-head.jpg' alt="" width="100%" mode="widthFix"></div>
     <div class="online-time">
       <div class="one"></div>
+      <div class="one-body"></div>
     </div>
   </div>
 

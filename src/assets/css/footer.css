@@ -19,11 +19,13 @@
 
 .navContainer li div{
   text-align: center;
+  font-size:24rpx;
 }
 .navContainer li i{
   height: 45rpx;
   display: inline-block;
   width: 100%;
+  margin-top: 20rpx;
 }
 .footerIcon{
   background-image: url("http://admin.qq.im/static/images/footer-icon.png");
@@ -31,17 +33,23 @@
 }
 .find{
   background-size: 40rpx;
-  background-position: top 0rpx left 0;
+  background-position: top 0rpx center;
 }
 .lineDown{
   background-size: 40rpx;
-  background-position: top -30rpx left 0;
+  background-position: top -45rpx center;
 }
 .lineUp{
   background-size: 40rpx;
-  background-position: top -50rpx left 0;
+  background-position: top -90rpx center;
 }
 .mine{
   background-size: 40rpx;
-  background-position: top -70rpx left 0;
+  background-position: top -140rpx center;
+}
+
+.footer-choose div{ color: #2da1d4}
+
+.footer-choose .footerIcon{
+  background-image: url("http://admin.qq.im/static/images/footer-icon-choose.png");
 }

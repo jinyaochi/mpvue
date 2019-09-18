@@ -1,5 +1,8 @@
 @import 'public.css';
-
+.online-head{
+  width: 100%;
+  height: auto;
+}
 .online-time .one{
  /* width: 100%;
   height: 400rpx;
@@ -9,4 +12,9 @@
   border-right:375rpx solid transparent; /* 动态获取 宽度 */
   border-left:375rpx solid transparent;
   border-bottom:140rpx solid #ef9c3b;
+}
+.one-body{
+  width: 100%;
+  height: 200rpx;
+  background:#ef9c3b ;
 }
