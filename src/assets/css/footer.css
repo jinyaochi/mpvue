@@ -26,7 +26,7 @@
   width: 100%;
 }
 .footerIcon{
-  background-image: url("/static/images/footer-icon.png");
+  background-image: url("http://admin.qq.im/static/images/footer-icon.png");
   background-repeat: no-repeat;
 }
 .find{
