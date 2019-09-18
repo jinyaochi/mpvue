@@ -17,7 +17,7 @@
   color:#333;
 }
 
-.subject .font>div>a{
+.subject .font div a,.felling a{
   display: inline-block;
 }
 .subject .head-img{
