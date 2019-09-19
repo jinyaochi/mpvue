@@ -1,7 +1,7 @@
 <template>
   <div class="sign">
     <div class="sign-logo">
-      <img src="/static/images/sign-logo.png" alt="">
+      <img src="/static/images/sign-logo.png" mode="widthFix" alt="">
     </div>
     <div class="sign-input">
       <input class="phone" type="text" placeholder="手机号" placeholder-class="placeholder">

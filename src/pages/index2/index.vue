@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="inContainer">
+      <div class="logo"><img src="/static/images/logo.png" alt="" mode="widthFix"></div>
       <div class="subject clearfix mb-35">
         <a class="image mt-10 mb-20" href="">
           <img src="/static/images/index-img1.jpg" width="100%" height="100%" mode="widthFix"/>

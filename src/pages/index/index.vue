@@ -9,7 +9,9 @@
     <a href="/pages/mine/main">我的</a>
     <a href="/pages/online/main">线上试听</a>
     <a href="/pages/sign/main">登录</a>
-    <a href="/pages/sign-subscribe/main">预约登录</a>
+    <a href="/pages/sign_subscribe/main">预约登录</a>
+    <a href="/pages/school_details/main">校区详情</a>
+    <a href="/pages/school_synopsis/main">校区简介</a>
 
   </div>
 </template>

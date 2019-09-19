@@ -5,14 +5,17 @@
     "pages/mine/main",
     "pages/online/main",
     "pages/sign/main",
-    "pages/sign-subscribe/main",
+    "pages/sign_subscribe/main",
+    "pages/school_details/main",
+    "pages/school_synopsis/main",
     "pages/counter/main",
     "pages/map/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#2f75c5",
+    "navigationBarBackgroundColor": "#2da1d4",
     "navigationBarTitleText": "能动英语",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
   }
 }

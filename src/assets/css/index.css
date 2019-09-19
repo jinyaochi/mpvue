@@ -61,4 +61,11 @@
   background-size:20rpx;
   background-position:top -42rpx left 0rpx;
 }
-
+.logo{
+  margin-top: 60rpx;
+  margin-bottom: 22rpx;
+}
+.logo img{
+  width: 215rpx;
+  height:50rpx;
+}
