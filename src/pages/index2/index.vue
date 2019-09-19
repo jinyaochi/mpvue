@@ -62,36 +62,6 @@
 
     </div>
 
-    <!-- 底部
-    <div style="height: 116rpx"></div>
-    <div class="nav">
-      <ul class="navContainer bt-1">
-        <li>
-          <a href="">
-            <i class="footerIcon find"></i>
-            <div>发现</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="footerIcon lineDown"></i>
-            <div>线下试听</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="footerIcon lineUp"></i>
-            <div>线上试听</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="footerIcon mine"></i>
-            <div>我的</div>
-          </a>
-        </li>
-      </ul>
-    </div> -->
     <bottomnav></bottomnav>
   </div>
 
@@ -102,7 +72,14 @@
   import bottomnav from '@/components/footer.vue';
 
   export default {
+  onLoad(){
+      this.$net.post({
+          url: 'index',
+          data: {}
+      }).then(res => {
 
+      })
+  },
   data () {
     return {
 
