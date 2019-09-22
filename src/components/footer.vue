@@ -5,7 +5,7 @@
       <div class="nav">
         <ul class="navContainer bt-1">
           <li class="footer-choose">
-            <a href="">
+            <a href="/pages/index/main">
               <i class="footerIcon find"></i>
               <div>发现</div>
             </a>
@@ -17,13 +17,13 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/pages/online/main">
               <i class="footerIcon lineUp"></i>
               <div>线上试听</div>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/pages/mine/main">
               <i class="footerIcon mine"></i>
               <div>我的</div>
             </a>

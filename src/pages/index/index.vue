@@ -1,26 +1,84 @@
 <template>
-  <div id="box">
-    <button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">微信手机号授权登陆</button>
-    <button open-type="contact">进入客服会话</button>
-    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
-    <button open-type="openSetting">打开授权设置页</button>
-    <a href="/pages/map/main">打开地图</a>
-    <a href="/pages/index2/main">index2</a>
-    <a href="/pages/mine/main">我的</a>
-    <a href="/pages/online/main">线上试听</a>
-    <a href="/pages/sign/main">登录</a>
-    <a href="/pages/sign_subscribe/main">预约登录</a>
-    <a href="/pages/school_details/main">校区详情</a>
-    <a href="/pages/school_synopsis/main">校区简介</a>
+  <div>
+    <div class="inContainer">
+      <div class="logo"><img src="/static/images/logo.png" alt="" mode="widthFix"></div>
+      <div class="subject clearfix mb-35">
+        <a class="image mt-10 mb-20" href="">
+          <img src="/static/images/index-img1.jpg" width="100%" height="100%" mode="widthFix"/>
+        </a>
+        <div class="font">
+          <h1>单词记不住，会说不会写</h1>
+          <div>
+            <a href=""><span>1.2w</span><span class="icon love"></span></a>
+            <a href=""><span>1.4 </span><span class="icon good"></span></a>
+            <a href=""><span>100</span><span class="icon look"></span></a>
+          </div>
+        </div>
+        <div class="head-img">
+          <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img2.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img3.png" mode="widthFix" alt="">
+        </div>
 
+      </div>
+      <div class="subject clearfix mb-35">
+        <a class="image mt-10 mb-20" href="">
+          <img src="/static/images/index-img2.jpg" width="100%" height="100%" mode="widthFix"/>
+        </a>
+        <div class="font">
+          <h1>单词记不住，会说不会写</h1>
+          <div>
+            <a href=""><span>1.2w</span><span class="icon love"></span></a>
+            <a href=""><span>1.4 </span><span class="icon good"></span></a>
+            <a href=""><span>100</span><span class="icon look"></span></a>
+          </div>
+        </div>
+        <div class="head-img">
+          <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img2.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img3.png" mode="widthFix" alt="">
+        </div>
+
+      </div>
+      <div class="subject clearfix mb-35">
+        <a class="image mt-10 mb-20" href="">
+          <img src="/static/images/index-img3.jpg" width="100%" height="100%" mode="widthFix"/>
+        </a>
+        <div class="font">
+          <h1>单词记不住，会说不会写</h1>
+          <div>
+            <a href=""><span>1.2w</span><span class="icon love"></span></a>
+            <a href=""><span>1.4 </span><span class="icon good"></span></a>
+            <a href=""><span>100</span><span class="icon look"></span></a>
+          </div>
+        </div>
+        <div class="head-img">
+          <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img2.png" mode="widthFix" alt="">
+          <img src="/static/images/head-img3.png" mode="widthFix" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+    <bottomnav></bottomnav>
   </div>
+
 </template>
 
 <script>
+  import '@/assets/css/index.css';
+  import bottomnav from '@/components/footer.vue';
 
-export default {
-  onLoad () {
+  export default {
+  onLoad(){
+      this.$net.post({
+          url: 'index',
+          data: {}
+      }).then(res => {
 
+      })
   },
   data () {
     return {
@@ -29,30 +87,25 @@ export default {
   },
   methods: {
 
-    begin ({timeStamp}) {
-      console.log('innnn')
-    },
-    markertap (e) {
-      console.log(e)
-    },
-    getPhoneNumber (e) {
-      console.log('12222222222323')
-    }
-
   },
+  components: {
+    bottomnav
+  },
+
 
   created () {
     // let app = getApp()
   }
 }
+
 </script>
 <style>
-  a{ height: 50rpx;}
 
-  .button-hover {
-    background-color: red;
-  }
-  .other-button-hover {
-    background-color: blue;
-  }
+
+
+
+
+
+
+
 </style>
