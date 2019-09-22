@@ -6,6 +6,7 @@
   width: 100%;
   height: 116rpx;
   background: #fff;
+  z-index: 99999999;
 }
 .navContainer{
   margin: 0 30rpx;
