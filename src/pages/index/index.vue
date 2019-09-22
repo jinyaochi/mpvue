@@ -72,14 +72,6 @@
   import bottomnav from '@/components/footer.vue';
 
   export default {
-  onLoad(){
-      this.$net.post({
-          url: 'index',
-          data: {}
-      }).then(res => {
-
-      })
-  },
   data () {
     return {
 
@@ -94,7 +86,13 @@
 
 
   created () {
-    // let app = getApp()
+    let app = getApp();
+      this.$net.post({
+          url: 'index',
+          data: {}
+      }).then(res => {
+
+      })
   }
 }
 

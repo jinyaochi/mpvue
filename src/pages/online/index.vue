@@ -1,15 +1,15 @@
 <template>
   <div class="online">
-    <div class="online-time time1">
+    <div v-for="(item, index) in categorys" :class="'online-time time'+(index+1)">
       <div class="font">
         <div>
         <p>
             <span>第一期表音密码共10节</span>
         </p>
         <div class="felling">
-          <a href=""><span>1.2w</span><span class="icon icon-white love"></span></a>
-          <a href=""><span>1.4 </span><span class="icon icon-white good"></span></a>
-          <a href=""><span>100</span><span class="icon icon-white look"></span></a>
+          <a href=""><span>{{item.collect}}</span><span class="icon icon-white love"></span></a>
+          <a href=""><span>{{item.zan}} </span><span class="icon icon-white good"></span></a>
+          <a href=""><span>{{item.view}}</span><span class="icon icon-white look"></span></a>
         </div>
         </div>
       </div>
@@ -18,42 +18,7 @@
         <div class="one-body"></div>
       </div>
     </div>
-    <div class="online-time time2">
-      <div class="font">
-        <div>
-        <p>
-          <span>第一期表音密码共10节</span>
-        </p>
-        <div class="felling">
-          <a href=""><span>1.2w</span><span class="icon icon-white love"></span></a>
-          <a href=""><span>1.4 </span><span class="icon icon-white good"></span></a>
-          <a href=""><span>100</span><span class="icon icon-white look"></span></a>
-        </div>
-        </div>
-      </div>
-      <div class="box">
-        <div class="one"></div>
-        <div class="one-body"></div>
-      </div>
-    </div>
-    <div class="online-time time3">
-      <div class="font">
-        <div>
-        <p>
-            <span>第一期表音密码共10节</span>
-        </p>
-        <div class="felling">
-          <a href=""><span>1.2w</span><span class="icon icon-white love"></span></a>
-          <a href=""><span>1.4 </span><span class="icon icon-white good"></span></a>
-          <a href=""><span>100</span><span class="icon icon-white look"></span></a>
-        </div>
-        </div>
-      </div>
-      <div class="box">
-        <div class="one"></div>
-        <div class="one-body"></div>
-      </div>
-    </div>
+
       <bottomnav></bottomnav>
   </div>
 </template>
@@ -66,7 +31,7 @@
   export default {
   data () {
     return {
-
+        categorys : []
     }
   },
   methods: {
@@ -74,12 +39,14 @@
   },
 
   created () {
+      var _this = this;
     let app = getApp();
       this.$net.post({
           url: 'category',
           data: {}
       }).then(res => {
-
+          _this.categorys = res.data;
+          console.log(_this.categorys);
       })
   },
   components: {

@@ -20,8 +20,12 @@
   /*background: aquamarine;*/
 }
 .time1{ bottom:650rpx }
-.time2{ bottom:350rpx }
-.time3{ bottom:100rpx }
+.time2{ bottom:420rpx }
+.time3{ bottom:180rpx }
+
+.felling{
+  text-align: center;
+}
 
 .box{ position: relative; height: 500rpx; }
 
