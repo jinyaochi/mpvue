@@ -1,6 +1,7 @@
 <template>
   <div>
-      <div>轮播</div>
+      <div class="parent"></div>
+      <div style="height: 560rpx">轮播图</div>
       <div class="details-box">
         <div class="details-title title">
           <p>能动英语清河校区</p>
@@ -11,13 +12,13 @@
           <div class="title">
             <p class="details-top">北京市海淀区杏石口路56号B座2层201室</p>
             <span><img class="details-img" src="/static/images/details-pisition.png"  alt="" mode="aspectFill"></span>
-            <div class="details-botton">现在咨询</div>
-            <div class="details-botton">预约体验</div>
+            <div class="details-botton details-botton-margin">现在咨询</div>
+            <div class="details-botton details-botton-margin">预约体验</div>
           </div>
           <ul class="details-comment">
             <li>
-              <!--<img src="" alt="">-->
-              <div>
+              <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+              <div class="comment-box">
                 <div class="comment-title">
                   <h2>我是郭德纲</h2>
                   <span>2019-12-31</span>
@@ -27,13 +28,13 @@
                 </p>
                 <div class="comment-reply">
                   <span>热血</span>
-                  <span>&nbsp;回复&nbsp;</span>
+                  <span class="black">&nbsp;回复&nbsp;</span>
                   <span>冲鸭:</span>
                   <span>我觉得还行吧，一般</span>
                 </div>
                 <div class="comment-reply">
                   <span>热血</span>
-                  <span>&nbsp;回复&nbsp;</span>
+                  <span class="black">&nbsp;回复&nbsp;</span>
                   <span>冲鸭:</span>
                   <span>我觉得还行吧，一般</span>
                 </div>
@@ -51,8 +52,8 @@
               </div>
             </li>
             <li>
-              <!--<img src="" alt="">-->
-              <div>
+              <img src="/static/images/head-img1.png" mode="widthFix" alt="">
+              <div class="comment-box">
                 <div class="comment-title">
                   <h2>我是郭德纲</h2>
                   <span>2019-12-31</span>

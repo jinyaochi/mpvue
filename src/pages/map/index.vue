@@ -1,6 +1,6 @@
 <template>
   <div id="box">
-
+  <div class="parent"></div>
     <map
             id="map"
             longitude="116.39987458203123"
@@ -13,18 +13,77 @@
             show-location
     >
 
-      <cover-view class="controls">
-        <cover-view class="time">00:00</cover-view>
-      </cover-view>
-
     </map>
+    <div class="details-box">
+      <div class="details-title title">
+        <div class="title-center">距您5KM 共 3个分校</div>
+      </div>
 
+    <div class="details-content box-top">
+      <ul class="map-shop">
+        <li>
+          <img src="/static/images/map-img.jpg" alt="">
+          <div class="map-shop-font">
+            <div>
+              <h1>能动英语清河店</h1>
+              <span>1.2km</span>
+            </div>
+            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+            <div class="details-botton">现在咨询</div>
+            <div class="details-botton">预约体验</div>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/map-img.jpg" alt="">
+          <div class="map-shop-font">
+            <div>
+              <h1>能动英语清河店</h1>
+              <span>1.2km</span>
+            </div>
+            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+            <div class="details-botton">现在咨询</div>
+            <div class="details-botton">预约体验</div>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/map-img.jpg" alt="">
+          <div class="map-shop-font">
+            <div>
+              <h1>能动英语清河店</h1>
+              <span>1.2km</span>
+            </div>
+            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+            <div class="details-botton">现在咨询</div>
+            <div class="details-botton">预约体验</div>
+          </div>
+        </li>
+        <li>
+          <img src="/static/images/map-img.jpg" alt="">
+          <div class="map-shop-font">
+            <div>
+              <h1>能动英语清河店</h1>
+              <span>1.2km</span>
+            </div>
+            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+            <div class="details-botton">现在咨询</div>
+            <div class="details-botton">预约体验</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <bottomnav></bottomnav>
   </div>
 </template>
 
 <script>
+  import '@/assets/css/school_details.css';
+  import '@/assets/css/map.css';
 
-export default {
+  import bottomnav from '@/components/footer.vue';
+
+
+  export default {
   data () {
     return {
       markers: [{
@@ -63,41 +122,12 @@ export default {
     }
 
   },
+    components: {bottomnav
 
+    },
   created () {
     // let app = getApp()
   }
 }
 </script>
-<style>
-  page,#box{
-    height: 100%;
-  }
-  #map{
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .controls {
-    position: relative;
-    top: 50%;
-    height: 50px;
-    margin-top: -25px;
-    display: flex;
-  }
-  .play,.pause,.time {
-    flex: 1;
-    height: 100%;
-  }
-  .time {
-    text-align: center;
-    background-color: rgba(0, 0, 0, .5);
-    color: white;
-    line-height: 50px;
-  }
-  .img {
-    width: 40px;
-    height: 40px;
-    margin: 5px auto;
-  }
-</style>
+

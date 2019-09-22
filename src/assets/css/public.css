@@ -14,4 +14,13 @@
   clear:both;
 }
 
-
+.parent{
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  z-index: 99999999;
+  position: fixed;
+  top:80rpx;
+  left:43rpx;
+}

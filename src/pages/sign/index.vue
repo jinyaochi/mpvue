@@ -11,6 +11,7 @@
       </div>
     </div>
     <div class="sign-button">立即登录</div><!-- 微信登陆 -->
+    <div class="sign-button sign-button2">微信登陆</div><!-- 微信登陆 -->
   </div>
 
 </template>

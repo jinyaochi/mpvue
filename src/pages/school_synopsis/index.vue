@@ -1,6 +1,7 @@
 <template>
   <div>
-      <div>轮播</div>
+      <div class="parent"></div>
+      <div style="height: 560rpx">轮播图</div>
       <div class="details-box">
         <div class="details-title title">
           <p>能动英语清河校区</p>
