@@ -80,6 +80,7 @@ page,#box{
   -webkit-line-clamp:2;
   -webkit-box-orient:vertical;
   overflow: hidden;
+  min-height: 54rpx;
 }
 .map-shop img{
   width: 225rpx;
@@ -104,11 +105,9 @@ page,#box{
   border-radius: 6rpx;
   float: left;
 }
-.details-box{
-  bottom: 768rpx;
-}
+
 .details-content{
-  height: 768rpx;
+  max-height: 568rpx;
   overflow-y: auto;
   border-top: 15rpx solid #fff;
 }

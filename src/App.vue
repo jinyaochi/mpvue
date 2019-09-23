@@ -27,6 +27,15 @@ export default {
       }
     })
 
+    //调用自带位置获取
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function (res) {
+        mpvue.setStorageSync('latitude', res.latitude)
+        mpvue.setStorageSync('longitude', res.longitude)
+      }
+    })
+
   }
 }
 </script>

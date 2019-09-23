@@ -19,7 +19,7 @@
       </div>
     </div>
 
-      <bottomnav></bottomnav>
+      <bottomnav :type="type"></bottomnav>
   </div>
 </template>
 
@@ -31,7 +31,8 @@
   export default {
   data () {
     return {
-        categorys : []
+      categorys : [],
+      type:3
     }
   },
   methods: {
@@ -46,7 +47,6 @@
           data: {}
       }).then(res => {
           _this.categorys = res.data;
-          console.log(_this.categorys);
       })
   },
   components: {

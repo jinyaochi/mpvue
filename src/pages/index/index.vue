@@ -2,67 +2,28 @@
   <div>
     <div class="inContainer">
       <div class="logo"><img src="http://admin.qq.im/static/images/logo.png" alt="" mode="widthFix"></div>
-      <div class="subject clearfix mb-35">
-        <a class="image mt-10 mb-20" href="">
-          <img src="http://admin.qq.im/static/images/index-img1.jpg" width="100%" height="100%" mode="widthFix"/>
-        </a>
-        <div class="font">
-          <h1>单词记不住，会说不会写</h1>
-          <div>
-            <a href=""><span>1.2w</span><span class="icon love"></span></a>
-            <a href=""><span>1.4 </span><span class="icon good"></span></a>
-            <a href=""><span>100</span><span class="icon look"></span></a>
-          </div>
-        </div>
-        <div class="head-img">
-          <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
-          <img src="http://admin.qq.im/static/images/head-img2.png" mode="widthFix" alt="">
-          <img src="http://admin.qq.im/static/images/head-img3.png" mode="widthFix" alt="">
-        </div>
 
-      </div>
-      <div class="subject clearfix mb-35">
+      <div v-for="(item, index) in lists" class="subject clearfix mb-35">
         <a class="image mt-10 mb-20" href="">
-          <img src="http://admin.qq.im/static/images/index-img2.jpg" width="100%" height="100%" mode="widthFix"/>
+          <img :src="item.cover" width="100%" height="100%" mode="widthFix"/>
         </a>
         <div class="font">
-          <h1>单词记不住，会说不会写</h1>
+          <h1>{{item.name}}</h1>
           <div>
-            <a href=""><span>1.2w</span><span class="icon love"></span></a>
-            <a href=""><span>1.4 </span><span class="icon good"></span></a>
-            <a href=""><span>100</span><span class="icon look"></span></a>
+            <a href=""><span>{{item.collect}}</span><span class="icon love"></span></a>
+            <a href=""><span>{{item.zan}}</span><span class="icon good"></span></a>
+            <a href=""><span>{{item.view}}</span><span class="icon look"></span></a>
           </div>
         </div>
         <div class="head-img">
-          <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
-          <img src="http://admin.qq.im/static/images/head-img2.png" mode="widthFix" alt="">
-          <img src="http://admin.qq.im/static/images/head-img3.png" mode="widthFix" alt="">
-        </div>
-
-      </div>
-      <div class="subject clearfix mb-35">
-        <a class="image mt-10 mb-20" href="">
-          <img src="http://admin.qq.im/static/images/index-img3.jpg" width="100%" height="100%" mode="widthFix"/>
-        </a>
-        <div class="font">
-          <h1>单词记不住，会说不会写</h1>
-          <div>
-            <a href=""><span>1.2w</span><span class="icon love"></span></a>
-            <a href=""><span>1.4 </span><span class="icon good"></span></a>
-            <a href=""><span>100</span><span class="icon look"></span></a>
-          </div>
-        </div>
-        <div class="head-img">
-          <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
-          <img src="http://admin.qq.im/static/images/head-img2.png" mode="widthFix" alt="">
-          <img src="http://admin.qq.im/static/images/head-img3.png" mode="widthFix" alt="">
+          <img  v-for="(t, i) in item.viewer" :src="t.cover" mode="widthFix" alt="">
         </div>
 
       </div>
 
     </div>
 
-    <bottomnav></bottomnav>
+    <bottomnav :type="type"></bottomnav>
   </div>
 
 </template>
@@ -74,7 +35,8 @@
   export default {
   data () {
     return {
-
+      type: 1,
+      lists : []
     }
   },
   methods: {
@@ -86,12 +48,13 @@
 
 
   created () {
+    let _this = this;
     let app = getApp();
-      this.$net.post({
+      _this.$net.post({
           url: 'index',
           data: {}
       }).then(res => {
-
+        _this.lists = res.data;
       })
   }
 }
