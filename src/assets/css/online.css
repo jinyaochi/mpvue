@@ -19,9 +19,9 @@
   height: 200rpx;
   /*background: aquamarine;*/
 }
-.time1{ bottom:650rpx }
-.time2{ bottom:420rpx }
-.time3{ bottom:180rpx }
+.time1{ bottom:50%; }
+.time2{ bottom:33%; }
+.time3{ bottom:15%; }
 
 .felling{
   text-align: center;

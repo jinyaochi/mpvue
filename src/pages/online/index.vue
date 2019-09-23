@@ -4,7 +4,7 @@
       <div class="font">
         <div>
         <p>
-            <span>第一期表音密码共10节</span>
+            <span>{{item.name}}</span>
         </p>
         <div class="felling">
           <a href=""><span>{{item.collect}}</span><span class="icon icon-white love"></span></a>

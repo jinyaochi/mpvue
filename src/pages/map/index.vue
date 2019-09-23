@@ -19,7 +19,7 @@
 
       <div class="details-content box-top">
         <ul class="map-shop">
-          <li v-for="item in school" :key="kkk" @click="tomap(item.id)">
+          <li v-for="item in school" :key="kkk" @click="tomap(item.lat,item.lng)">
             <img :src="item.images[0]" alt="">
             <div class="map-shop-font">
               <div>
@@ -27,7 +27,7 @@
                 <span>1.2km</span>
               </div>
               <p>{{item.full_address}} {{item.location}}</p>
-              <div class="details-botton">现在咨询</div>
+              <button class="details-botton call_btn" open-type="contact">现在咨询</button>
               <div class="details-botton">预约体验</div>
             </div>
           </li>
@@ -54,6 +54,28 @@
         _this.longitude = mpvue.getStorageSync('longitude')
         _this.latitude = mpvue.getStorageSync('latitude')
       }
+      this.$net.post({
+          url: 'school',
+          data: {}
+      }).then(res => {
+          _this.school = res.data;
+
+          for(var s in _this.school){
+              _this.markers[s] = {
+                  iconPath: 'http://api.qq.im/static/images/details-pisition.png',
+                  id: _this.school[s].id,
+                  callout: {
+                      content: _this.school[s].name,
+                      display: 'ALWAYS',
+                      padding:'20rpx',
+                  },
+                  longitude: _this.school[s].lng,
+                  latitude: _this.school[s].lat,
+                  width: 15,
+                  height: 20
+              };
+          }
+      })
     },
   data () {
     return {
@@ -69,39 +91,15 @@
     markertap (e) {
       console.log(e)
     },
-    tomap(id){
-      console.log(id);
-      this.markers = [{
-        iconPath: 'http://admin.qq.im/static/images/jiantou.png',
-        id: 0,
-        callout: {
-          content: '123123sd',
-          display: 'ALWAYS'
-        },
-        longitude: 116.39987458203123,
-        latitude: 39.90915359502086,
-        width: 10,
-        height: 10
-      }];
-      this.latitude = 39.90915359502086;
-      this.longitude = 116.39987458203123;
+    tomap(lat,lng){
+      this.latitude = lat;
+      this.longitude = lng;
     }
 
   },
     components: {
       bottomnav
-    },
-  created () {
-    let _this = this;
-    let app = getApp();
-
-    this.$net.post({
-      url: 'school',
-      data: {}
-    }).then(res => {
-      _this.school = res.data;
-    })
-  }
+    }
 }
 </script>
 

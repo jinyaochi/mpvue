@@ -106,6 +106,14 @@ page,#box{
   float: left;
 }
 
+.call_btn{
+  position: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: unset !important;
+  font-size: unset !important;
+}
+
 .details-content{
   max-height: 568rpx;
   overflow-y: auto;
