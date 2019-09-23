@@ -2,34 +2,34 @@
   <div>
     <div class="head-top">
       <div>
-        <img src="/static/images/head-img1.png" alt="">
+        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
         <p>我是郭德纲</p>
       </div>
     </div>
     <ul class="mine-choose">
       <li>
         <a href="">
-          <img src="/static/images/mine-img1.png" alt="">我的收藏
+          <img src="http://admin.qq.im/static/images/mine-img1.png" alt="">我的收藏
         </a>
       </li>
       <li>
         <a href="">
-          <img src="/static/images/mine-img2.png" alt="">我的购买
+          <img src="http://admin.qq.im/static/images/mine-img2.png" alt="">我的购买
         </a>
       </li>
       <li>
         <a href="">
-          <img src="/static/images/mine-img3.png" alt="">联系客服
+          <img src="http://admin.qq.im/static/images/mine-img3.png" alt="">联系客服
         </a>
       </li>
       <li>
         <a href="">
-          <img src="/static/images/mine-img4.png" alt="">我的二维码
+          <img src="http://admin.qq.im/static/images/mine-img4.png" alt="">我的二维码
         </a>
       </li>
       <li>
         <a href="">
-          <img src="/static/images/mine-img5.png" alt="">设置
+          <img src="http://admin.qq.im/static/images/mine-img5.png" alt="">设置
         </a>
       </li>
     </ul>

@@ -22,7 +22,7 @@
     <div class="details-content box-top">
       <ul class="map-shop">
         <li>
-          <img src="/static/images/map-img.jpg" alt="">
+          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
           <div class="map-shop-font">
             <div>
               <h1>能动英语清河店</h1>
@@ -34,7 +34,7 @@
           </div>
         </li>
         <li>
-          <img src="/static/images/map-img.jpg" alt="">
+          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
           <div class="map-shop-font">
             <div>
               <h1>能动英语清河店</h1>
@@ -46,7 +46,7 @@
           </div>
         </li>
         <li>
-          <img src="/static/images/map-img.jpg" alt="">
+          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
           <div class="map-shop-font">
             <div>
               <h1>能动英语清河店</h1>
@@ -58,7 +58,7 @@
           </div>
         </li>
         <li>
-          <img src="/static/images/map-img.jpg" alt="">
+          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
           <div class="map-shop-font">
             <div>
               <h1>能动英语清河店</h1>
@@ -87,7 +87,7 @@
   data () {
     return {
       markers: [{
-        iconPath: '/static/images/jiantou.png',
+        iconPath: 'http://admin.qq.im/static/images/jiantou.png',
         id: 0,
         callout: {
           content: '123123sd',
