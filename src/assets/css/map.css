@@ -1,5 +1,7 @@
 @import "public.css";
 
+
+
 page,#box{
   width:100%;
   height: 100%;
@@ -47,19 +49,27 @@ page,#box{
 
   padding: 40rpx 0;
   overflow: hidden;
-  border-top: 1rpx solid #e9e9e9;
+  border-bottom: 1rpx solid #e9e9e9;
 }
-.map-shop li:first-child{
-  border-top:none
+.map-shop li:last-child{
+  border-bottom:none
 }
 .map-shop-font{
   overflow: hidden;
 }
 
 .map-shop-font h1{
-  width: 100%;
+  width: 70%;
   font-size: 26rpx;
   color: #333;
+
+  float: left;
+}
+.map-shop-font span{
+  width: 30%;
+  color: #2da1d4;
+  text-align: right;
+  float: right;
 }
 .map-shop li p{
   width:100%;

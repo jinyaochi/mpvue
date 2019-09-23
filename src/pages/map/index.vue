@@ -16,6 +16,7 @@
       <div class="details-title title">
         <div class="title-center">距您5KM 共 3个分校</div>
       </div>
+
       <div class="details-content box-top">
         <ul class="map-shop">
           <li v-for="item in school" :key="kkk" @click="tomap(item.id)">
@@ -30,6 +31,8 @@
               <div class="details-botton">预约体验</div>
             </div>
           </li>
+
+
         </ul>
       </div>
     </div>
