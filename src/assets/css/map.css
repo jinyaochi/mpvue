@@ -1,7 +1,5 @@
 @import "public.css";
 
-
-
 page,#box{
   width:100%;
   height: 100%;
@@ -72,6 +70,7 @@ page,#box{
   -webkit-line-clamp:2;
   -webkit-box-orient:vertical;
   overflow: hidden;
+  min-height: 54rpx;
 }
 .map-shop img{
   width: 225rpx;
@@ -96,11 +95,9 @@ page,#box{
   border-radius: 6rpx;
   float: left;
 }
-.details-box{
-  bottom: 64rpx;
-}
+
 .details-content{
-  max-height: 818rpx;
+  max-height: 568rpx;
   overflow-y: auto;
   border-top: 15rpx solid #fff;
 }

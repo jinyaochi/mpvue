@@ -34,7 +34,7 @@
       </li>
     </ul>
 
-    <bottomnav></bottomnav>
+    <bottomnav :type="type"></bottomnav>
   </div>
 
 </template>
@@ -48,7 +48,7 @@
 
     data () {
       return {
-
+        type:4
       }
     },
     methods: {

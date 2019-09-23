@@ -3,14 +3,12 @@
   <div class="parent"></div>
     <map
             id="map"
-            longitude="116.39987458203123"
-            latitude="39.90915359502086"
+            :longitude="longitude"
+            :latitude="latitude"
             scale="14"
             :markers="markers"
             @markertap="markertap"
-            :polyline="polyline"
-            @begin="begin"
-            show-location
+            show-location="true"
     >
 
     </map>
@@ -20,35 +18,22 @@
       </div>
       <div class="details-content box-top">
         <ul class="map-shop">
-          <li>
-            <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
+          <li v-for="item in school" :key="kkk" @click="tomap(item.id)">
+            <img :src="item.images[0]" alt="">
             <div class="map-shop-font">
               <div>
-                <h1>能动英语清河店</h1>
+                <h1>{{item.name}}</h1>
                 <span>1.2km</span>
               </div>
-              <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+              <p>{{item.full_address}} {{item.location}}</p>
               <div class="details-botton">现在咨询</div>
               <div class="details-botton">预约体验</div>
             </div>
           </li>
-          <li>
-            <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
-            <div class="map-shop-font">
-              <div>
-                <h1>能动英语清河店</h1>
-                <span>1.2km</span>
-              </div>
-              <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-              <div class="details-botton">现在咨询</div>
-              <div class="details-botton">预约体验</div>
-            </div>
-          </li>
-
         </ul>
       </div>
     </div>
-    <bottomnav></bottomnav>
+    <bottomnav :type="type"></bottomnav>
   </div>
 </template>
 
@@ -60,9 +45,30 @@
 
 
   export default {
+    onLoad(){
+      let _this = this;
+      if(mpvue.getStorageSync('latitude')){
+        _this.longitude = mpvue.getStorageSync('longitude')
+        _this.latitude = mpvue.getStorageSync('latitude')
+      }
+    },
   data () {
     return {
-      markers: [{
+      type: 2,//导航展示
+      longitude: 116.39987458203123,
+      latitude: 39.90915359502086,
+      markers: [],
+      school:[],
+    }
+  },
+  methods: {
+
+    markertap (e) {
+      console.log(e)
+    },
+    tomap(id){
+      console.log(id);
+      this.markers = [{
         iconPath: 'http://admin.qq.im/static/images/jiantou.png',
         id: 0,
         callout: {
@@ -73,36 +79,25 @@
         latitude: 39.90915359502086,
         width: 10,
         height: 10
-      }],
-      polyline: [{
-        points: [{
-          longitude: 116.39987458203123,
-          latitude: 39.90915359502086
-        }, {
-          longitude: 116.42734040234373,
-          latitude: 39.878598176249206
-        }],
-        color: '#FF00DD',
-        width: 2,
-        dottedLine: true
-      }]
-    }
-  },
-  methods: {
-
-    begin ({timeStamp}) {
-      console.log('innnn')
-    },
-    markertap (e) {
-      console.log(e)
+      }];
+      this.latitude = 39.90915359502086;
+      this.longitude = 116.39987458203123;
     }
 
   },
-    components: {bottomnav
-
+    components: {
+      bottomnav
     },
   created () {
-    // let app = getApp()
+    let _this = this;
+    let app = getApp();
+
+    this.$net.post({
+      url: 'school',
+      data: {}
+    }).then(res => {
+      _this.school = res.data;
+    })
   }
 }
 </script>

@@ -3,6 +3,7 @@
 .details-box{
   position: absolute;
   width: 100%;
+  bottom: 0;
   height: auto;
 }
 .details-title{
@@ -50,6 +51,8 @@
   margin-top: 10rpx;
 }
 .details-content{
+  position: relative;
+  top: -116rpx;
   width: calc( 100% - 90rpx );
   color: #666;
   padding: 0 45rpx;
