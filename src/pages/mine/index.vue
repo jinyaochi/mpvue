@@ -2,7 +2,7 @@
   <div>
     <div class="head-top">
       <div>
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
+        <div><img src="http://admin.qq.im/static/images/head-img1.png" alt=""></div>
         <p>我是郭德纲</p>
       </div>
     </div>
