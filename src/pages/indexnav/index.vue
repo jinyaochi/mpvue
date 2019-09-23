@@ -12,6 +12,11 @@
     <a href="/pages/sign_subscribe/main">预约登录</a>
     <a href="/pages/school_details/main">校区详情</a>
     <a href="/pages/school_synopsis/main">校区简介</a>
+    <a href="/pages/buy/main">我的购买</a>
+    <a href="/pages/start/main">我的收藏</a>
+    <a href="/pages/set/main">设置</a>
+    <a href="/pages/service/main">联系客服</a>
+    <a href="/pages/class_list/main">课程列表</a>
 
   </div>
 </template>

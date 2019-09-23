@@ -1,7 +1,7 @@
 @import "public.css";
 
 .posit{ position: relative; }
-.sign-logo{
+.sign-logo,.service-logo{
   height: 420rpx;
   display: flex;
   justify-content: center;
@@ -10,6 +10,10 @@
 .sign-logo img{
   width: 115rpx;
   height: auto;
+}
+.service-logo img{
+  width: 155rpx;
+  height: 40rpx;
 }
 .sign-get{
   position: absolute;
@@ -32,9 +36,10 @@
   display:flex;
   align-items:center;!*垂直居中*!
   justify-content: center;!*水平居中*!
-  */
   background: #2da1d4;
-  /*background: url("http://admin.qq.im/static/images/online-head.jpg");*/
+  */
+
+  background: url("http://admin.qq.im/static/images/sigin-back.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding: 0 88rpx;
@@ -54,12 +59,15 @@
 }
 .sign-input .phone{
   display: inline-block;
-  width: 100%;
+  width: calc( 100% - 25rpx );
   height: 60rpx;
   color:#fff;
   font-size:24rpx;
   border-bottom: 1rpx solid #fff;
   margin-top: 55rpx;
+}
+.sign-input input{
+  padding-left: 25rpx;
 }
 .placeholder{
   color: #ffffff;
@@ -72,7 +80,7 @@
   color: #ffffff;
   text-align: center;
   line-height: 70rpx;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.4);
   border: 1rpx solid #fff;
   border-radius: 70rpx;
   margin-top: 180rpx;
@@ -84,7 +92,17 @@
 }
 
 
-
+.sign-textarea{
+  width: calc( 100% - 46rpx );
+  height: 280rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+  background: rgba(255,255,255,0.4);
+  margin-top: 56rpx;
+  font-size: 24rpx;
+  padding: 16rpx 23rpx;
+  color: #fff;
+}
 
 
 

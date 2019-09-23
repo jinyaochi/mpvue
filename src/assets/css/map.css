@@ -49,27 +49,19 @@ page,#box{
 
   padding: 40rpx 0;
   overflow: hidden;
-  border-bottom: 1rpx solid #e9e9e9;
+  border-top: 1rpx solid #e9e9e9;
 }
-.map-shop li:last-child{
-  border-bottom:none
+.map-shop li:first-child{
+  border-top:none
 }
 .map-shop-font{
   overflow: hidden;
 }
 
 .map-shop-font h1{
-  width: 70%;
+  width: 100%;
   font-size: 26rpx;
   color: #333;
-
-  float: left;
-}
-.map-shop-font span{
-  width: 30%;
-  color: #2da1d4;
-  text-align: right;
-  float: right;
 }
 .map-shop li p{
   width:100%;
@@ -105,10 +97,10 @@ page,#box{
   float: left;
 }
 .details-box{
-  bottom: 768rpx;
+  bottom: 64rpx;
 }
 .details-content{
-  height: 768rpx;
+  max-height: 818rpx;
   overflow-y: auto;
   border-top: 15rpx solid #fff;
 }

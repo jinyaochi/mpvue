@@ -1,9 +1,5 @@
 @import "public.css";
 
-.inContainer{
-  padding: 0 50rpx;
-  width: calc(100% - 100rpx)
-}
 .subject> .image > img{
   width: 100%;
   height:277rpx;
@@ -68,4 +64,17 @@
 .logo img{
   width: 215rpx;
   height:50rpx;
+}
+.buy-return{
+  margin-top: 85rpx;
+  margin-bottom: 22rpx;
+  font-size: 35rpx;
+  display: flex;
+  align-items:center;
+}
+
+.buy-return img{
+  width: 25rpx;
+  height:41rpx;
+  margin-right: 35rpx;
 }

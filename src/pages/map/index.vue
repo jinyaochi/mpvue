@@ -18,59 +18,35 @@
       <div class="details-title title">
         <div class="title-center">距您5KM 共 3个分校</div>
       </div>
+      <div class="details-content box-top">
+        <ul class="map-shop">
+          <li>
+            <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
+            <div class="map-shop-font">
+              <div>
+                <h1>能动英语清河店</h1>
+                <span>1.2km</span>
+              </div>
+              <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+              <div class="details-botton">现在咨询</div>
+              <div class="details-botton">预约体验</div>
+            </div>
+          </li>
+          <li>
+            <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
+            <div class="map-shop-font">
+              <div>
+                <h1>能动英语清河店</h1>
+                <span>1.2km</span>
+              </div>
+              <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
+              <div class="details-botton">现在咨询</div>
+              <div class="details-botton">预约体验</div>
+            </div>
+          </li>
 
-    <div class="details-content box-top">
-      <ul class="map-shop">
-        <li>
-          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
-          <div class="map-shop-font">
-            <div>
-              <h1>能动英语清河店</h1>
-              <span>1.2km</span>
-            </div>
-            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-            <div class="details-botton">现在咨询</div>
-            <div class="details-botton">预约体验</div>
-          </div>
-        </li>
-        <li>
-          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
-          <div class="map-shop-font">
-            <div>
-              <h1>能动英语清河店</h1>
-              <span>1.2km</span>
-            </div>
-            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-            <div class="details-botton">现在咨询</div>
-            <div class="details-botton">预约体验</div>
-          </div>
-        </li>
-        <li>
-          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
-          <div class="map-shop-font">
-            <div>
-              <h1>能动英语清河店</h1>
-              <span>1.2km</span>
-            </div>
-            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-            <div class="details-botton">现在咨询</div>
-            <div class="details-botton">预约体验</div>
-          </div>
-        </li>
-        <li>
-          <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
-          <div class="map-shop-font">
-            <div>
-              <h1>能动英语清河店</h1>
-              <span>1.2km</span>
-            </div>
-            <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-            <div class="details-botton">现在咨询</div>
-            <div class="details-botton">预约体验</div>
-          </div>
-        </li>
-      </ul>
-    </div>
+        </ul>
+      </div>
     </div>
     <bottomnav></bottomnav>
   </div>

@@ -8,6 +8,11 @@
     "pages/sign_subscribe/main",
     "pages/school_details/main",
     "pages/school_synopsis/main",
+    "pages/buy/main",
+    "pages/start/main",
+    "pages/set/main",
+    "pages/service/main",
+    "pages/class_list/main",
     "pages/counter/main",
     "pages/map/main"
   ],
