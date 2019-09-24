@@ -56,7 +56,10 @@
       }
       this.$net.post({
           url: 'school',
-          data: {}
+          data: {
+              longitude:_this.longitude,
+              latitude:_this.latitude,
+          }
       }).then(res => {
           _this.school = res.data;
 
