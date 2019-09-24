@@ -12,12 +12,15 @@
     </div>
     <div class="sign-button" @click="mobilelogin">立即登录</div><!-- 微信登陆 -->
     <div class="sign-button sign-button2">微信登陆</div><!-- 微信登陆 -->
+
+    <alertyes :type="type"></alertyes>
   </div>
 
 </template>
 
 <script>
   import '@/assets/css/sign.css';
+  import alertyes from '@/components/alert_yes.vue';
 
 
 
@@ -103,7 +106,10 @@
 
   created () {
     // let app = getApp()
-  }
+  },
+    components: {
+      alertyes
+    }
 }
 </script>
 
