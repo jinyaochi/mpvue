@@ -74,17 +74,6 @@
   },
   components: {
     bottomnav
-  },
-
-
-  created () {
-    let app = getApp();
-      this.$net.post({
-          url: 'index',
-          data: {}
-      }).then(res => {
-
-      })
   }
 }
 

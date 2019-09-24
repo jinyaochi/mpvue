@@ -33,6 +33,15 @@
   import bottomnav from '@/components/footer.vue';
 
   export default {
+  onLoad(){
+    let _this = this;
+    _this.$net.post({
+      url: 'index',
+      data: {}
+    }).then(res => {
+      _this.lists = res.data;
+    })
+  },
   data () {
     return {
       type: 1,
@@ -44,18 +53,6 @@
   },
   components: {
     bottomnav
-  },
-
-
-  created () {
-    let _this = this;
-    let app = getApp();
-      _this.$net.post({
-          url: 'index',
-          data: {}
-      }).then(res => {
-        _this.lists = res.data;
-      })
   }
 }
 
