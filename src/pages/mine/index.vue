@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="head-top">
-      <div>
-        <div><img src="http://admin.qq.im/static/images/head-img1.png" alt=""></div>
-        <p>我是郭德纲</p>
+      <div v-if="!user.id" @click="tologin">
+        <div><img src="http://admin.qq.im/static/images/default.png" alt=""></div>
+        <p>未登录</p>
+      </div>
+      <div v-if="user.id">
+        <div><img :src="user.cover" alt=""></div>
+        <p>{{user.nickname}}</p>
       </div>
     </div>
     <ul class="mine-choose">
@@ -45,14 +49,25 @@
 
 
   export default {
-
+    onLoad(){
+      let _this = this;
+      _this.$net.post({
+        url: 'user',
+        data: {}
+      }).then(res => {
+        _this.user = res.data;
+      })
+    },
     data () {
       return {
-        type:4
+        type:4,
+        user: {}
       }
     },
     methods: {
-
+      tologin(){
+        this.$location.navigate('/pages/sign/main');
+      }
     },
     components: {
       bottomnav

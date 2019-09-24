@@ -17,6 +17,7 @@
 }
 .sign-get{
   position: absolute;
+  z-index: 999999;
   width: 200rpx;
   height: 30rpx;
   font-size: 24rpx;
