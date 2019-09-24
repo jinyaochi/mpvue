@@ -11,9 +11,9 @@
       </div>
     </div>
     <div class="sign-button" @click="mobilelogin">立即登录</div><!-- 微信登陆 -->
-    <div class="sign-button sign-button2">微信登陆</div><!-- 微信登陆 -->
+    <div class="sign-button sign-button2" @click="is_show=true">微信登陆</div><!-- 微信登陆 -->
 
-    <alertyes :type="type"></alertyes>
+    <alertchoose v-if="is_show" :message="message"></alertchoose>
   </div>
 
 </template>
@@ -21,16 +21,24 @@
 <script>
   import '@/assets/css/sign.css';
   import alertyes from '@/components/alert_yes.vue';
-
-
+  import alertchoose from '@/components/alert_choose.vue';
+  import alertfont from '@/components/alert_font.vue';
 
   export default {
   data () {
     return {
+      parentmethod: 'wxlogin',
+      message: '确定授权用户信息吗',
       mobile: '',
+      is_show: false,
       tips: '获取验证码',
       code: ''
     }
+  },
+  components: {
+      alertyes,
+      alertchoose,
+      alertfont
   },
   methods: {
     mobilelogin(){
@@ -83,33 +91,11 @@
 
       })
     },
-    wxlogin(){
-      var _this = this;
-      // 登录
-      wx.login({
-        success: res => {
-          // 发送 res.code 到后台换取 openId, sessionKey, unionId
-          _this.$net.post({
-            url: 'login',
-            data: {
-              'code': res.code
-            }
-          }).then(res => {
-            mpvue.setStorageSync('token', res.data.access_token)
-            mpvue.setStorageSync('openid', res.data.openid)
-          })
-        }
-      })
-    }
-
   },
 
   created () {
     // let app = getApp()
   },
-    components: {
-      alertyes
-    }
 }
 </script>
 

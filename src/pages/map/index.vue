@@ -14,7 +14,7 @@
     </map>
     <div class="details-box">
       <div class="details-title title">
-        <div class="title-center">距您5KM 共 3个分校</div>
+        <div class="title-center">距您10KM 共 {{nearnum}}个分校</div>
       </div>
 
       <div class="details-content box-top">
@@ -24,7 +24,7 @@
             <div class="map-shop-font">
               <div>
                 <h1>{{item.name}}</h1>
-                <span>1.2km</span>
+                <span>{{item.distence}}km</span>
               </div>
               <p>{{item.full_address}} {{item.location}}</p>
               <button class="details-botton call_btn" open-type="contact">现在咨询</button>
@@ -46,7 +46,6 @@
 
   import bottomnav from '@/components/footer.vue';
 
-
   export default {
     onLoad(){
       let _this = this;
@@ -62,8 +61,12 @@
           }
       }).then(res => {
           _this.school = res.data;
+          _this.nearnum = 0;
 
           for(var s in _this.school){
+              if(_this.school[s].distence <= 10){
+                  _this.nearnum++;
+              }
               _this.markers[s] = {
                   iconPath: 'http://api.qq.im/static/images/details-pisition.png',
                   id: _this.school[s].id,
@@ -87,6 +90,7 @@
       latitude: 39.90915359502086,
       markers: [],
       school:[],
+      nearnum:0,
     }
   },
   methods: {

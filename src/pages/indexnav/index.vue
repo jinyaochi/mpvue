@@ -2,7 +2,6 @@
   <div id="box">
     <button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">微信手机号授权登陆</button>
     <button open-type="contact">进入客服会话</button>
-    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
     <button open-type="openSetting">打开授权设置页</button>
     <a href="/pages/map/main">打开地图</a>
     <a href="/pages/index/main">index2</a>

@@ -12,17 +12,12 @@
 <script>
   import '@/assets/css/alert_font.css';
 
-
   export default {
-    props:['type'],
-    name: "footer",
     data:{
 
     },
     methods: {
-      redirect(url){
-        this.$location.rediect(url)
-      }
+
     }
   };
 </script>
