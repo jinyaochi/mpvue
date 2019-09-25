@@ -101,6 +101,7 @@
     return {
       id: 0,
       school: [],
+      comments: [],
     }
   },
   mounted(){
@@ -113,6 +114,14 @@
       }
     }).then(res => {
       _this.school = res.data;
+    })
+
+    _this.$net.post({
+      url: 'school/comments/'+_this.id,
+      data: {
+      }
+    }).then(res => {
+      // _this.comments = res.data;
     })
   },
   methods: {
