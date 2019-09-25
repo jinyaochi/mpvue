@@ -12,6 +12,8 @@
 
 <script>
   import '@/assets/css/video_details.css';
+  export default {
 
+  }
 
 </script>

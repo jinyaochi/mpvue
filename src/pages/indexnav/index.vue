@@ -16,7 +16,7 @@
     <a href="/pages/set/main">设置</a>
     <a href="/pages/service/main">联系客服</a>
     <a href="/pages/class_list/main">课程列表</a>
-    <a href="/pages/video_details/main">视频介绍</a>
+    <a href="/pages/video_details/main">视频详情</a>
 
   </div>
 </template>

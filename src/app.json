@@ -13,7 +13,7 @@
     "pages/set/main",
     "pages/service/main",
     "pages/class_list/main",
-    "pages/video_details /main",
+    "pages/video_details/main",
     "pages/counter/main",
     "pages/map/main"
   ],
