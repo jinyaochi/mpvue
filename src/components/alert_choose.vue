@@ -5,7 +5,7 @@
           <p>{{message}}</p>
           <div class="choose">
             <div @click="closethis">取消</div>
-            <button open-type="getUserInfo" lang="zh_CN" @getuserinfo="bindGetUserInfo">获取用户信息</button>
+            <button open-type="getUserInfo" lang="zh_CN" @getuserinfo="bindGetUserInfo">确定</button>
           </div>
         </div>
       </div>
