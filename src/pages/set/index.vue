@@ -5,7 +5,6 @@
       <li>清除缓存</li>
       <li>退出登录</li>
     </ul>
-    <comment></comment>
   </div>
 
 </template>
@@ -13,12 +12,9 @@
 <script>
   import '@/assets/css/index.css';
   import '@/assets/css/set.css';
-  import comment from '@/components/comment.vue';
 
   export default {
-    components: {
-      comment
-    }
+
 }
 
 </script>

@@ -22,27 +22,23 @@
             <div class="details-botton details-botton-margin">预约体验</div>
           </div>
           <ul class="details-comment">
-            <li>
-              <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
+
+            <li v-for="(item,index) in comments" :key="key">
+              <img :src="item.cover" mode="widthFix" alt="">
               <div class="comment-box">
                 <div class="comment-title">
-                  <h2>我是郭德纲</h2>
-                  <span>2019-12-31</span>
+                  <h2>{{item.name}}</h2>
+                  <span>{{item.created_at}}</span>
                 </div>
                 <p class="comment-content">
-                  校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了
+                  {{item.content}}
                 </p>
-                <div class="comment-reply">
-                  <span>热血</span>
+
+                <div v-for="(t,i) in item.son" :key="k" class="comment-reply">
+                  <span>{{t.reply_name}}</span>
                   <span class="black">&nbsp;回复&nbsp;</span>
-                  <span>冲鸭:</span>
-                  <span>我觉得还行吧，一般</span>
-                </div>
-                <div class="comment-reply">
-                  <span>热血</span>
-                  <span class="black">&nbsp;回复&nbsp;</span>
-                  <span>冲鸭:</span>
-                  <span>我觉得还行吧，一般</span>
+                  <span>{{t.name}}:</span>
+                  <span>{{t.content}}</span>
                 </div>
 
                 <div class="comment-choose">
@@ -57,51 +53,36 @@
                 </div>
               </div>
             </li>
-            <li>
-              <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
-              <div class="comment-box">
-                <div class="comment-title">
-                  <h2>我是郭德纲</h2>
-                  <span>2019-12-31</span>
-                </div>
-                <p class="comment-content">
-                  校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了
-                </p>
 
-                <div class="comment-choose">
-                  <a href="">
-                    <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-zan.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                    <span>0</span>
-                  </a>
-                  <a href="">
-                    <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                    <span>回复</span>
-                  </a>
-                </div>
-              </div>
-            </li>
           </ul>
 
 
         </div>
       </div>
     <div class="comment-inp">
-      <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color">
+      <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color" disabled @click="showcomment">
     </div>
+    <comment v-if="comment_show"></comment>
+
   </div>
 </template>
 
 <script>
   import '@/assets/css/school_details.css';
-
-
+  import comment from '@/components/comment.vue';
 
   export default {
+  components: {
+      comment
+  },
   data () {
     return {
       id: 0,
+      comment_show: false,
       school: [],
       comments: [],
+      reply_id: 0,
+      parent_id: 0
     }
   },
   mounted(){
@@ -121,13 +102,21 @@
       data: {
       }
     }).then(res => {
-      // _this.comments = res.data;
+      _this.comments = res.data;
     })
   },
   methods: {
+    tijiao(content = ''){
+        console.log(content);
+    },
     tojianjie(){
       let _this = this;
       _this.$location.navigate('/pages/school_synopsis/main?id='+_this.id);
+    },
+    showcomment(pid = 0,rid = 0){
+        this.reply_id = rid;
+        this.parent_id = pid;
+        this.comment_show = true;
     },
     getQuery() {
       /* 获取当前路由栈数组 */
