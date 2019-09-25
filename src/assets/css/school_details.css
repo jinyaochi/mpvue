@@ -66,6 +66,7 @@
 .details-content .details-botton{
   width:160rpx;
   height: 48rpx;
+  font-size: 24rpx;
   line-height: 48rpx;
   text-align: center;
   color: #e66a06;
