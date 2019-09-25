@@ -31,7 +31,7 @@
   overflow: hidden;
   margin-top: 35rpx;
 }
-.choose div{
+.choose div,.choose button{
   width: 263rpx;
   height:74rpx;
   line-height: 74rpx;
@@ -46,7 +46,7 @@
   margin-right:40rpx;
   float:left;
 }
-.choose div:last-child{
+.choose button{
   color: #fff;
   background: #ec6d06;
   border: 1rpx solid #ec6d06;

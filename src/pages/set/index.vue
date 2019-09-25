@@ -6,7 +6,6 @@
       <li>退出登录</li>
     </ul>
 
-    <bottomnav></bottomnav>
   </div>
 
 </template>
@@ -16,14 +15,7 @@
   import '@/assets/css/set.css';
 
   export default {
-  data () {
-    return {
 
-    }
-  },
-  methods: {
-
-  }
 }
 
 </script>
