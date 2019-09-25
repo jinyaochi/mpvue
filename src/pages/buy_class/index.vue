@@ -7,9 +7,8 @@
 
 <script>
   import '@/assets/css/index.css';
-  import bottomnav from '@/components/footer.vue';
 
-
+  export default {}
 
 </script>
 <style>

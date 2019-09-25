@@ -11,17 +11,7 @@
 </template>
 
 <script>
-  import '@/assets/css/index.css';
+  import '@/assets/css/video_details.css';
 
 
 </script>
-<style>
-
-
-
-
-
-
-
-
-</style>

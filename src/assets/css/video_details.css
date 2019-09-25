@@ -1,6 +1,10 @@
 @import 'public.css';
 
-
+.video_top{
+  width: 100%;
+  height:30rpx;
+  background: #000;
+}
 
 
 
