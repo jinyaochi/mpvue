@@ -1,11 +1,17 @@
 <template>
   <div>
       <div class="parent"></div>
-      <div style="height: 560rpx">轮播图</div>
-      <div class="details-box">
+      <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block v-for="(item, index) in school.images2" :index="index" :key="key">
+              <swiper-item>
+                  <image style="width:100%;" :src="item" class="slide-image" mode="widthFix"/>
+              </swiper-item>
+          </block>
+      </swiper>
+      <div class="details-box2">
         <div class="details-title title">
           <p>能动英语清河校区</p>
-          <span>关闭</span>
+          <span @click="backup">关闭</span>
         </div>
 
         <div class="details-content">
@@ -24,16 +30,38 @@
 <script>
   import '@/assets/css/school_details.css';
 
-
-
   export default {
   data () {
     return {
-
+      id: 0,
+      school: [],
     }
   },
-  methods: {
+    mounted(){
+      let _this = this;
+      _this.id = this.getQuery().id;
 
+      _this.$net.post({
+        url: 'school/show/'+_this.id,
+        data: {
+        }
+      }).then(res => {
+        _this.school = res.data;
+      })
+    },
+  methods: {
+    backup(){
+      wx.navigateBack({
+        delta: 1
+      })
+    },
+    getQuery() {
+      /* 获取当前路由栈数组 */
+      const pages = getCurrentPages()
+      const currentPage = pages[pages.length - 1]
+      const options = currentPage.options
+      return options
+    }
   },
 
   created () {

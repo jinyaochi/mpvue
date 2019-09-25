@@ -1,18 +1,24 @@
 <template>
   <div>
       <div class="parent"></div>
-      <div style="height: 560rpx">轮播图</div>
-      <div class="details-box">
+      <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+        <block v-for="(item, index) in school.images" :index="index" :key="key">
+          <swiper-item>
+            <image style="width:100%;" :src="item" class="slide-image" mode="widthFix"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <div class="details-box2">
         <div class="details-title title">
-          <p>能动英语清河校区</p>
-          <span>简介</span>
+          <p>{{school.name}}</p>
+          <span @click="tojianjie">简介</span>
         </div>
 
         <div class="details-content">
           <div class="title">
-            <p class="details-top">北京市海淀区杏石口路56号B座2层201室</p>
+            <p class="details-top">{{school.full_address}} {{school.location}}</p>
             <span><img class="details-img" src="http://admin.qq.im/static/images/details-pisition.png"  alt="" mode="aspectFill"></span>
-            <div class="details-botton details-botton-margin">现在咨询</div>
+            <button open-type="contact" class="details-botton details-botton-margin">现在咨询</button>
             <div class="details-botton details-botton-margin">预约体验</div>
           </div>
           <ul class="details-comment">
@@ -75,16 +81,13 @@
               </div>
             </li>
           </ul>
-          <div style="height: 116px"></div>
-          <div class="comment-inp">
-            <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color">
-          </div>
+
 
         </div>
-
-
-
       </div>
+    <div class="comment-inp">
+      <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color">
+    </div>
   </div>
 </template>
 
@@ -96,11 +99,34 @@
   export default {
   data () {
     return {
-
+      id: 0,
+      school: [],
     }
   },
-  methods: {
+  mounted(){
+    let _this = this;
+    _this.id = this.getQuery().id;
 
+    _this.$net.post({
+      url: 'school/show/'+_this.id,
+      data: {
+      }
+    }).then(res => {
+      _this.school = res.data;
+    })
+  },
+  methods: {
+    tojianjie(){
+      let _this = this;
+      _this.$location.navigate('/pages/school_synopsis/main?id='+_this.id);
+    },
+    getQuery() {
+      /* 获取当前路由栈数组 */
+      const pages = getCurrentPages()
+      const currentPage = pages[pages.length - 1]
+      const options = currentPage.options
+      return options
+    }
   },
 
   created () {

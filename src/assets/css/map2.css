@@ -1,14 +1,10 @@
 @import "public.css";
 
-.details-box2{
-  position: relative;
+.details-box{
+  position: absolute;
   width: 100%;
+  bottom: 0;
   height: auto;
-  top: -63rpx;
-}
-.swiper{
-  height: 630rpx;
-  overflow: hidden;
 }
 .details-title{
   width: calc( 100% - 90rpx );
@@ -139,7 +135,6 @@
   font-size:24rpx;
   border-top: 1rpx solid #ccc;
   background: #ffffff;
-    margin:0 45rpx;
 }
 .comment-inp input{
   height: 116rpx;

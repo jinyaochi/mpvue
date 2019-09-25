@@ -41,7 +41,7 @@
 </template>
 
 <script>
-  import '@/assets/css/school_details.css';
+  import '@/assets/css/map2.css';
   import '@/assets/css/map.css';
 
   import bottomnav from '@/components/footer.vue';
@@ -96,7 +96,7 @@
   methods: {
 
     markertap (e) {
-      console.log(e)
+      this.$location.navigate('/pages/school_details/main?id='+e.mp.markerId);
     },
     tomap(lat,lng){
       this.latitude = lat;
