@@ -1,0 +1,38 @@
+@import 'public.css';
+
+
+.class-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 116rpx;
+  overflow: hidden;
+}
+.class-footer div{
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 116rpx;
+  float: left;
+}
+
+.class-footer div:first-child{
+  width: 60%;
+  background: #333333;
+}
+.class-footer div:last-child{
+  width: 40%;
+  background: #ec6d06;
+}
+
+
+
+
+
+
+
+
+
+
+
+

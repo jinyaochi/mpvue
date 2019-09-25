@@ -1,13 +1,17 @@
 <template>
   <div>
-    <img class="class-img" src="http://admin.qq.im/static/images/online-head.jpg" width="100%" height="100%" mode="widthFix"/>
+    <div class="class-img">
+      <img src="http://admin.qq.im/static/images/online-head.jpg" width="100%" height="100%" mode="widthFix"/>
+    </div>
+
     <div class="class-head">
       <div class="class-one">
         <div>
           <p>第一期  表音密码  共10节</p>
           <ul class="class-li">
             <li>
-              <div class="class-li-zan"></div>
+              <!--<div class="class-li-zan"></div>-->
+              <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix"/>
               <div>1.2w</div>
             </li>
             <li>
@@ -19,11 +23,18 @@
               <div>1.2w</div>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="class-two">
+        <div>
           <p>286元/期</p>
           <div class="class-but">购买</div>
         </div>
       </div>
-
+      <!--
+      <p>286元/期</p>
+          <div class="class-but">购买</div>
+          -->
       <div class="inContainer">
         <ul class="map-shop">
           <li>

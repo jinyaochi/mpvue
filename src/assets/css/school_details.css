@@ -63,7 +63,14 @@
   background: #fff;
   border-radius: 50rpx 50rpx 0 0;
 }
+
+button{
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
 .details-content .details-botton{
+  display: inline-block;
   width:160rpx;
   height: 48rpx;
   font-size: 24rpx;
@@ -76,6 +83,7 @@
   border-radius: 6rpx;
   float: left;
 }
+
 .details-botton-margin{  margin-bottom:45rpx;}
 .details-comment{
   width: 100%;
@@ -115,6 +123,7 @@
 .comment-title span{
   width:200rpx;
   text-align: right;
+  color: #cccccc;
   float: right;
 }
 .comment-content{

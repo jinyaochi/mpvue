@@ -110,6 +110,7 @@
 .comment-title span{
   width:200rpx;
   text-align: right;
+  color: #cccccc;
   float: right;
 }
 .comment-content{
