@@ -1,0 +1,56 @@
+
+
+.inp-black{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+}
+.inp-box{
+  width: calc( 100% - 44rpx );
+  position: absolute;
+  bottom: 0;
+  padding: 0 22rpx 15rpx 22rpx;
+  background: #fff;
+}
+
+.inp-top{
+  overflow: hidden;
+  text-align: center;
+  margin:20rpx 0 ;
+  font-size: 24rpx;
+  color: #333333;
+}
+.inp-top span{
+  display: inline-block;
+  width: 100rpx;
+  height: 40rpx;
+  font-size: 21rpx;
+  color:#666;
+  background: #f2f2f2;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.inp-top span:first-child{
+  float: left;
+}
+.inp-top span:last-child{
+  float: right;
+}
+
+.inp-input{
+  width: calc( 100% - 40rpx);
+  height:290rpx ;
+  background: #f2f2f2;
+  display: inline-block;
+  border-radius: 8rpx;
+  padding: 20rpx ;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+
