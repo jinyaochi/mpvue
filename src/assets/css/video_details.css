@@ -127,12 +127,16 @@
 
 /*-------------*/
 
-.font{ width: 60%; float: left}
+.font{
+  width: 60%;
+  float: left;
+  margin: 40rpx 0;
+}
 .font>h1{
   font-size: 27rpx;
   color:#333;
 }
-.font div a,.felling a{
+.font a{
   display: inline-block;
 }
 .head-img{
@@ -147,7 +151,7 @@
   margin-left: 10rpx;
   display: inline-block;
 }
-.font>div span{
+.font span{
   display: inline-block;
   font-size: 19rpx;
   color:#999;

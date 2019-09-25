@@ -9,11 +9,9 @@
     <div class="inContainer">
       <div class="clearfix">
         <div class="font">
-          <div>
             <a href=""><span>qqqq</span><span class="icon love"></span></a>
             <a href=""><span>1111</span><span class="icon good"></span></a>
             <a href=""><span>2222</span><span class="icon look"></span></a>
-          </div>
         </div>
         <div class="head-img">
           <img mode="widthFix" alt="">
