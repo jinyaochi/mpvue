@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!--- x 测试 ----->
+    <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
+    <!---------------->
     <div class="inContainer">
       <div class="logo"><img src="http://admin.qq.im/static/images/logo.png" alt="" mode="widthFix"></div>
 
@@ -32,6 +35,9 @@
   import '@/assets/css/index.css';
   import bottomnav from '@/components/footer.vue';
 
+
+
+
   export default {
   onLoad(){
     let _this = this;
@@ -45,7 +51,8 @@
   data () {
     return {
       type: 1,
-      lists : []
+      lists : [],
+      isIphoneX: this.globalData.isIphoneX, //适配iphonex
     }
   },
   methods: {
@@ -59,6 +66,10 @@
 </script>
 <style>
 
+  .isIphoneX-class {
+    padding-top:64rpx;
+    background: red;
+  }
 
 
 

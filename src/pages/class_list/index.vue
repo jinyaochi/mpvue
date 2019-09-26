@@ -10,16 +10,15 @@
           <p>第一期  表音密码  共10节</p>
           <ul class="class-li">
             <li>
-              <!--<div class="class-li-zan"></div>-->
-              <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix"/>
+              <div class="class-li-zan love"></div>
               <div>1.2w</div>
             </li>
             <li>
-              <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix"/>
+              <div class="class-li-zan good class-li-zan-choose"></div>
               <div>1.2w</div>
             </li>
             <li>
-              <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix"/>
+              <div class="class-li-zan look"></div>
               <div>1.2w</div>
             </li>
           </ul>

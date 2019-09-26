@@ -135,13 +135,33 @@
 .orange{
   color: #e88032;
 }
-
+.class-li-zan-choose{
+  background-image: url("http://admin.qq.im/static/images/zan.png") !important;
+}
 .class-li-zan{
-  background:url("http://admin.qq.im/static/images/zan-white.png");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("http://admin.qq.im/static/images/zan-white.png");
+}
+.class-li-zan.love{
+  height: 40rpx;
+  width: 40rpx;
+  background-size:40rpx;
+  background-position:top 3rpx left 0rpx;
 }
 
-
-
+.class-li-zan.good{
+  height: 40rpx;
+  width: 40rpx;
+  background-size:40rpx;
+  background-position:top -45rpx left 0rpx;
+}
+.class-li-zan.look{
+  height: 40rpx;
+  width: 45rpx;
+  background-size:40rpx;
+  background-position:top -88rpx left 0rpx;
+}
 
 
 

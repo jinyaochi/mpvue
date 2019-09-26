@@ -10,3 +10,15 @@ App.mpType = 'app'
 
 const app = new Vue(App)
 app.$mount()
+
+// 兼容 苹果x
+Vue.prototype.globalData = getApp().globalData
+wx.getSystemInfo({
+  success: res => {
+    // console.log('手机信息res'+res.model)
+    let modelmes = res.model;
+    if (modelmes.search("iPhone X") != -1) {
+      app.globalData.isIphoneX = true;
+    }
+  }
+});
