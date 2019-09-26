@@ -19,16 +19,16 @@
 
       <div class="details-content box-top">
         <ul class="map-shop">
-          <li v-for="item in school" :key="kkk" @click="tomap(item.lat,item.lng)">
-            <img :src="item.images[0]" alt="">
+          <li v-for="item in school" :key="kkk">
+            <img :src="item.images[0]" alt="" @click="tomap(item.lat,item.lng)">
             <div class="map-shop-font">
-              <div>
+              <div @click="todetail(item.id)">
                 <h1>{{item.name}}</h1>
                 <span>{{item.distence}}km</span>
               </div>
-              <p>{{item.full_address}} {{item.location}}</p>
+              <p @click="tomap(item.lat,item.lng)">{{item.full_address}} {{item.location}}</p>
               <button class="details-botton call_btn" open-type="contact">现在咨询</button>
-              <div class="details-botton">预约体验</div>
+              <div class="details-botton" @click="toyuyue">预约体验</div>
             </div>
           </li>
 
@@ -94,11 +94,17 @@
     }
   },
   methods: {
+    toyuyue(){
+      this.$location.navigate('/pages/sign_subscribe/main');
+    },
     backto(index = 1){
       this.$location.backto(index);
     },
     markertap (e) {
       this.$location.navigate('/pages/school_details/main?id='+e.mp.markerId);
+    },
+    todetail (id) {
+      this.$location.navigate('/pages/school_details/main?id='+id);
     },
     tomap(lat,lng){
       this.latitude = lat;

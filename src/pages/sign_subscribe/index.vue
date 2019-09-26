@@ -1,5 +1,6 @@
 <template>
   <div class="sign">
+    <div class="parent" @click="backto"></div>
     <div class="sign-font">
       <h1>预约体验课</h1>
       <p>能动英语清河店</p>
@@ -31,7 +32,11 @@
     }
   },
   methods: {
-
+    backto(){
+      wx.navigateBack({
+        delta: 1
+      })
+    },
   },
 
   created () {

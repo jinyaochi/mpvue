@@ -43,8 +43,8 @@
 
                 <div class="comment-choose">
                   <a href="">
-                    <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-zan.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                    <span>0</span>
+                    <span class="comment-img" @click="zanzan(item.id)"><img class="details-img2" :src="'http://admin.qq.im/static/images/details-zan'+(item.selfzan ? '2':'')+'.png'" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
+                    <span>{{item.zan}}</span>
                   </a>
                   <a href="">
                     <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
@@ -107,6 +107,22 @@
     })
   },
   methods: {
+    zanzan(cid = 0){
+      let _this = this;
+      _this.$net.post({
+        url: 'school/comments/'+cid+'/zan',
+        data: {
+        }
+      }).then(res => {
+        _this.$net.post({
+          url: 'school/comments/'+_this.id,
+          data: {
+          }
+        }).then(res => {
+          _this.comments = res.data;
+        })
+      })
+    },
     tijiao(content = ''){
 
       let _this = this;
