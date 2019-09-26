@@ -6,7 +6,7 @@
         <span @click="quxiao">取消</span>
         <span @click="tijiao">提交</span>
       </div>
-      <textarea fixed="true" v-model="commentword" class="inp-input" cols="2"rows="6" cursor-spacing='240'></textarea>
+      <textarea fixed="true" v-model="commentword" :placeholder="tips" class="inp-input" cols="2"rows="6" cursor-spacing='240'></textarea>
 
     </div>
   </div>
@@ -15,7 +15,8 @@
 <script>
   import '@/assets/css/comment.css';
   export default {
-      data:{
+    props:['tips'],
+    data:{
           commentword:''
       },
       methods:{

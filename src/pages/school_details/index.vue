@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="parent"></div>
+      <div class="parent" @click="backto"></div>
       <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
         <block v-for="(item, index) in school.images" :index="index" :key="key">
           <swiper-item>
@@ -35,9 +35,9 @@
                 </p>
 
                 <div v-for="(t,i) in item.son" :key="k" class="comment-reply">
-                  <span>{{t.reply_name}}</span>
-                  <span class="black">&nbsp;回复&nbsp;</span>
-                  <span>{{t.name}}:</span>
+                  <span>{{t.name}}</span>
+                  <span v-if="t.reply_name" class="black">&nbsp;回复&nbsp;</span>
+                  <span><span v-if="t.reply_name">{{t.name}}</span>：</span>
                   <span>{{t.content}}</span>
                 </div>
 
@@ -48,7 +48,7 @@
                   </a>
                   <a href="">
                     <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                    <span>回复</span>
+                    <span @click="showcomment(item.id,0,item.name)">回复</span>
                   </a>
                 </div>
               </div>
@@ -60,9 +60,9 @@
         </div>
       </div>
     <div class="comment-inp">
-      <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color" disabled @click="showcomment">
+      <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color" disabled @click="showcomment()">
     </div>
-    <comment v-if="comment_show"></comment>
+    <comment v-if="comment_show" :tips="tips"></comment>
 
   </div>
 </template>
@@ -77,6 +77,7 @@
   },
   data () {
     return {
+      tips: '',
       id: 0,
       comment_show: false,
       school: [],
@@ -107,13 +108,45 @@
   },
   methods: {
     tijiao(content = ''){
-        console.log(content);
+
+      let _this = this;
+      _this.$net.post({
+        url: 'school/comments/'+_this.id+'/create',
+        data: {
+          content: content,
+          parent_id: _this.parent_id,
+          reply_id: _this.reply_id,
+        }
+      }).then(res => {
+
+        if(!res.status){
+          return wx.showToast({
+            title: res.info,
+            icon: 'none',
+            duration: 2000
+          })
+        }
+
+        this.comment_show = false;
+
+        _this.$net.post({
+          url: 'school/comments/'+_this.id,
+          data: {
+          }
+        }).then(res => {
+          _this.comments = res.data;
+        })
+      })
+    },
+    backto(index = 1){
+      this.$location.backto(index);
     },
     tojianjie(){
       let _this = this;
       _this.$location.navigate('/pages/school_synopsis/main?id='+_this.id);
     },
-    showcomment(pid = 0,rid = 0){
+    showcomment(pid = 0,rid = 0,name = ''){
+        this.tips = name ? '回复：' + name : '请输入评论内容';
         this.reply_id = rid;
         this.parent_id = pid;
         this.comment_show = true;

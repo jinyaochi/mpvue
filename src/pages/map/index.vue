@@ -1,6 +1,6 @@
 <template>
   <div id="box">
-  <div class="parent"></div>
+  <div class="parent" @click="backto"></div>
     <map
             id="map"
             :longitude="longitude"
@@ -94,7 +94,9 @@
     }
   },
   methods: {
-
+    backto(index = 1){
+      this.$location.backto(index);
+    },
     markertap (e) {
       this.$location.navigate('/pages/school_details/main?id='+e.mp.markerId);
     },

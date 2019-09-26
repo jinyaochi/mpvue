@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="parent"></div>
+      <div class="parent" @click="backup"></div>
       <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
           <block v-for="(item, index) in school.images2" :index="index" :key="key">
               <swiper-item>

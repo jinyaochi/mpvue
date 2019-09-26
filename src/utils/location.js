@@ -8,7 +8,13 @@ const navigate = function(url){
     url: url
   })
 };
+const backto = function(index = 1){
+  wx.navigateBack({
+    delta: index
+  })
+};
 export default {
   rediect,
-  navigate
+  navigate,
+  backto,
 }
