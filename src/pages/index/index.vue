@@ -52,7 +52,7 @@
     return {
       type: 1,
       lists : [],
-      isIphoneX: this.globalData.isIphoneX, //适配iphonex
+      isIphoneX: this.globalData.isIphoneX //适配iphonex
     }
   },
   methods: {
