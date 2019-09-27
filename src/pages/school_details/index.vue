@@ -19,7 +19,7 @@
             <p class="details-top">{{school.full_address}} {{school.location}}</p>
             <span><img class="details-img" src="http://admin.qq.im/static/images/details-pisition.png"  alt="" mode="aspectFill"></span>
             <button open-type="contact" class="details-botton details-botton-margin">现在咨询</button>
-            <div class="details-botton details-botton-margin">预约体验</div>
+            <div class="details-botton details-botton-margin" @click="toyuyue">预约体验</div>
           </div>
           <ul class="details-comment">
 
@@ -107,6 +107,9 @@
     })
   },
   methods: {
+    toyuyue(){
+      this.$location.navigate('/pages/sign_subscribe/main');
+    },
     zanzan(cid = 0){
       let _this = this;
       _this.$net.post({
