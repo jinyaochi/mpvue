@@ -88,7 +88,7 @@
 .comment-img{
   display: inline-block;
 }
-.comment-inp{
+.comment-inp2{
   position: fixed;
   bottom: 0;
   width: calc( 100% - 90rpx );
@@ -98,7 +98,7 @@
   border-top: 1rpx solid #ccc;
   background: #ffffff;
 }
-.comment-inp input{
+.comment-inp2 input{
   height: 116rpx;
 }
 .comment-inp-color{

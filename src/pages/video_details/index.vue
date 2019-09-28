@@ -1,111 +1,213 @@
 <template>
   <div class="">
     <div class="video_top"></div>
-    <div class="video_box"></div>
+    <video  class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
     <div class="inContainer video_blue">
-      <p>单词记不住？会说不会写？单词记不住？会说不会写？单词记不住？会说不会写？</p>
+      <p>{{goods.intro}}</p>
       <span>简介</span>
     </div>
     <div class="inContainer">
       <div class="clearfix">
         <div class="font">
-            <a href=""><span>666</span><span class="icon love icon-hui"></span></a>
-            <a href=""><span>1111</span><span class="icon good"></span></a>
-            <a href=""><span>2222</span><span class="icon look"></span></a>
+            <a href=""><span>{{goods.collect}}</span><span class="icon love"></span></a>
+            <a href=""><span>{{goods.zan}}</span><span class="icon good"></span></a>
+            <a href=""><span>{{goods.view}}</span><span class="icon look"></span></a>
         </div>
         <div class="head-img">
           <img src="/static/images/video-share.png" mode="widthFix" alt="">
         </div>
       </div>
       <div class="video_head">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-        <img src="http://admin.qq.im/static/images/head-img1.png" alt="">
-
+        <img v-for="item in goods.viewer" :key="key" :src="item.cover" alt="">
       </div>
 
 
       <ul class="details-comment">
-        <li>
-          <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
+
+        <li v-for="(item,index) in comments" :key="key">
+          <img :src="item.cover" mode="widthFix" alt="">
           <div class="comment-box">
             <div class="comment-title">
-              <h2>我是郭德纲</h2>
-              <span>2019-12-31</span>
+              <h2>{{item.name}}</h2>
+              <span>{{item.created_at}}</span>
             </div>
             <p class="comment-content">
-              校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了
+              {{item.content}}
             </p>
-            <div class="comment-reply">
-              <span>热血</span>
-              <span class="black">&nbsp;回复&nbsp;</span>
-              <span>冲鸭:</span>
-              <span>我觉得还行吧，一般</span>
-            </div>
-            <div class="comment-reply">
-              <span>热血</span>
-              <span class="black">&nbsp;回复&nbsp;</span>
-              <span>冲鸭:</span>
-              <span>我觉得还行吧，一般</span>
+
+            <div v-for="(t,i) in item.son" :key="k" class="comment-reply">
+              <span>{{t.name}}</span>
+              <span v-if="t.reply_name" class="black">&nbsp;回复&nbsp;</span>
+              <span><span v-if="t.reply_name">{{t.name}}</span>：</span>
+              <span>{{t.content}}</span>
             </div>
 
             <div class="comment-choose">
               <a href="">
-                <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-zan.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                <span>0</span>
+                <span class="comment-img" @click="zanzan(item.id)"><img class="details-img2" :src="'http://admin.qq.im/static/images/details-zan'+(item.selfzan ? '2':'')+'.png'" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
+                <span>{{item.zan}}</span>
               </a>
               <a href="">
                 <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                <span>回复</span>
+                <span @click="showcomment(item.id,0,item.name)">回复</span>
               </a>
             </div>
           </div>
         </li>
-        <li>
-          <img src="http://admin.qq.im/static/images/head-img1.png" mode="widthFix" alt="">
-          <div class="comment-box">
-            <div class="comment-title">
-              <h2>我是郭德纲</h2>
-              <span>2019-12-31</span>
-            </div>
-            <p class="comment-content">
-              校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了校区环境不错，老师也用专业，选对了
-            </p>
 
-            <div class="comment-choose">
-              <a href="">
-                <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-zan.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                <span>0</span>
-              </a>
-              <a href="">
-                <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
-                <span>回复</span>
-              </a>
-            </div>
-          </div>
-        </li>
       </ul>
-      <div style="height: 116px"></div>
-      <div class="comment-inp">
-        <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color">
+      <div style="height: 110rpx"></div>
+      <div class="comment-inp2">
+        <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color" disabled @click="showcomment()">
       </div>
     </div>
+
+    <comment v-if="comment_show" :tips="tips"></comment>
+
   </div>
 
 </template>
 
 <script>
   import '@/assets/css/video_details.css';
-  export default {
+  import comment from '@/components/comment.vue';
 
+  export default {
+      components: {
+          comment
+      },
+      onLoad(){
+          var _this = this;
+          _this.id = this.getQuery().id;
+          this.$net.post({
+              url: 'goods/'+_this.id,
+              data: {}
+          }).then(res => {
+              _this.goods = res.data;
+          })
+
+          _this.$net.post({
+              url: 'goods/comments/'+_this.id,
+              data: {
+              }
+          }).then(res => {
+              _this.comments = res.data;
+          })
+
+      },
+      data () {
+          return {
+              tips: '',
+              id: 0,
+              comment_show: false,
+              comments: [],
+              goods:[],
+          }
+      },
+      methods: {
+          collect(gid = 0){
+              let _this = this;
+              _this.$net.post({
+                  url: 'goods/collect/'+cid,
+                  data: {
+                  }
+              }).then(res => {
+                  _this.$net.post({
+                      url: 'goods/collect/'+_this.id,
+                      data: {
+                      }
+                  }).then(res => {
+                      _this.comments = res.data;
+                  })
+              })
+          },
+          zanzan(cid = 0){
+              let _this = this;
+              _this.$net.post({
+                  url: 'goods/comments/'+cid+'/zan',
+                  data: {
+                  }
+              }).then(res => {
+                  _this.$net.post({
+                      url: 'goods/comments/'+_this.id,
+                      data: {
+                      }
+                  }).then(res => {
+                      _this.comments = res.data;
+                  })
+              })
+          },
+          tijiao(content = ''){
+
+              let _this = this;
+              _this.$net.post({
+                  url: 'goods/comments/'+_this.id+'/create',
+                  data: {
+                      content: content,
+                      parent_id: _this.parent_id,
+                      reply_id: _this.reply_id,
+                  }
+              }).then(res => {
+
+                  if(!res.status){
+                      return wx.showToast({
+                          title: res.info,
+                          icon: 'none',
+                          duration: 2000
+                      })
+                  }
+
+                  this.comment_show = false;
+
+                  _this.$net.post({
+                      url: 'goods/comments/'+_this.id,
+                      data: {
+                      }
+                  }).then(res => {
+                      _this.comments = res.data;
+                  })
+              })
+          },
+          getQuery() {
+              /* 获取当前路由栈数组 */
+              const pages = getCurrentPages()
+              const currentPage = pages[pages.length - 1]
+              const options = currentPage.options
+              return options
+          },
+          videorun(event){
+              this.startrun(event.mp.detail.currentTime);
+          },
+          startrun(time = null){
+              var _this = this;
+              //判断分享或支付
+
+          },
+          showcomment(pid = 0,rid = 0,name = ''){
+              this.tips = name ? '回复：' + name : '请输入评论内容';
+              this.reply_id = rid;
+              this.parent_id = pid;
+              this.comment_show = true;
+          },
+      },
+      onShareAppMessage(options){
+          var that = this;
+          that.$net.post({
+              url: 'share/'+that.id,
+              data: {}
+          }).then(res => {
+              that.isshare = 1;
+          })
+          var shareObj = {
+              title: that.title,
+              path: '/pages/video-details-introduce/main?id='+that.id,
+              imageUrl: that.cover2,
+              success(){
+                  console.log(11232);
+              },
+          };
+          return shareObj;
+      }
   }
 
 </script>
