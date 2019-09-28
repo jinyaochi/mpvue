@@ -11,12 +11,16 @@
   align-items: center;
 
 }
-.head-top>div img{
-  width: 160rpx;
-  height: 160rpx;
-  border: 15rpx;
-  border-radius:100%;
+.head-border{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 10rpx solid #cac2ad;
+}
 
+.head-top>div img{
+  width: 150rpx;
+  height: 150rpx;
 }
 .head-top>div p{
   margin-top:35rpx;
@@ -39,8 +43,6 @@
 }
 .mine-choose li a{ width: 100%; display: inline-block; }
 .mine-choose li img{ width: 23rpx; height: 20rpx; margin-right: 32rpx;}
-
-
 
 
 

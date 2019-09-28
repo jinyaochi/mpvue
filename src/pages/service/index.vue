@@ -12,7 +12,7 @@
       <textarea class="sign-textarea" placeholder="反馈问题" placeholder-class="placeholder"></textarea>
 
     </div>
-    <div class="sign-button">立即登录</div><!-- 微信登陆 -->
+    <div class="sign-button sign-button-top">立即提交</div><!-- 微信登陆 -->
   </div>
 
 </template>

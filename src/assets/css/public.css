@@ -20,8 +20,8 @@
 .parent{
   width: 80rpx;
   height: 80rpx;
-  background: rgba(0,0,0,0.5);
-  border-radius: 50%;
+  background: url("http://admin.qq.im/static/images/return.png") center no-repeat;
+  background-size: 80rpx;
   z-index: 99999999;
   position: fixed;
   top:80rpx;

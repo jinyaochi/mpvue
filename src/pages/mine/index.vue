@@ -2,7 +2,7 @@
   <div>
     <div class="head-top">
       <div v-if="!user.id" @click="tologin">
-        <div><img src="http://admin.qq.im/static/images/default.png" alt=""></div>
+        <div class="head-border"><img src="http://admin.qq.im/static/images/default.png" alt=""></div>
         <p>未登录</p>
       </div>
       <div v-if="user.id">

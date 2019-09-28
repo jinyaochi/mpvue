@@ -9,7 +9,7 @@
     <div class="inContainer">
       <div class="clearfix">
         <div class="font">
-            <a href=""><span>666</span><span class="icon love"></span></a>
+            <a href=""><span>666</span><span class="icon love icon-hui"></span></a>
             <a href=""><span>1111</span><span class="icon good"></span></a>
             <a href=""><span>2222</span><span class="icon look"></span></a>
         </div>
