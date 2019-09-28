@@ -15,6 +15,7 @@
     "pages/class_list/main",
     "pages/buy_class/main",
     "pages/video_details/main",
+    "pages/rwm/main",
     "pages/counter/main",
     "pages/map/main"
   ],

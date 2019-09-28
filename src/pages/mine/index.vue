@@ -27,7 +27,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/pages/rwm/main">
           <img src="http://admin.qq.im/static/images/mine-img4.png" alt="">我的二维码
         </a>
       </li>
