@@ -18,6 +18,7 @@
     <a href="/pages/class_list/main">课程列表</a>
     <a href="/pages/buy_class/main">购买页面</a>
     <a href="/pages/video_details/main">视频详情</a>
+    <a href="/pages/rwm/main">二维码</a>
 
   </div>
 </template>
