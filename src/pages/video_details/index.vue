@@ -9,8 +9,8 @@
     <div class="inContainer">
       <div class="clearfix">
         <div class="font">
-            <a href=""><span>{{goods.collect}}</span><span class="icon love"></span></a>
-            <a href=""><span>{{goods.zan}}</span><span class="icon good"></span></a>
+            <a @click="tocollect"><span>{{goods.collect}}</span><span :class="'icon love' + (goods.selfcollect ? '' :'icon_no')"></span></a>
+            <a @click="tozan" href=""><span>{{goods.zan}}</span><span :class="'icon good' + (goods.selfzan ? '' :'icon_no')"></span></a>
             <a href=""><span>{{goods.view}}</span><span class="icon look"></span></a>
         </div>
         <div class="head-img">
@@ -105,19 +105,35 @@
           }
       },
       methods: {
-          collect(gid = 0){
+          tozan(){
               let _this = this;
               _this.$net.post({
-                  url: 'goods/collect/'+cid,
+                  url: 'goods/zan/'+_this.id,
                   data: {
                   }
               }).then(res => {
-                  _this.$net.post({
-                      url: 'goods/collect/'+_this.id,
-                      data: {
-                      }
+                  this.$net.post({
+                      url: 'goods/'+_this.id,
+                      data: {}
                   }).then(res => {
-                      _this.comments = res.data;
+                      _this.goods.selfcollect = res.data.selfcollect;
+                      _this.goods.selfzan = res.data.selfzan;
+                  })
+              })
+          },
+          tocollect(){
+              let _this = this;
+              _this.$net.post({
+                  url: 'goods/collect/'+_this.id,
+                  data: {
+                  }
+              }).then(res => {
+                  this.$net.post({
+                      url: 'goods/'+_this.id,
+                      data: {}
+                  }).then(res => {
+                      _this.goods.selfcollect = res.data.selfcollect;
+                      _this.goods.selfzan = res.data.selfzan;
                   })
               })
           },

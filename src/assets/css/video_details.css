@@ -161,6 +161,10 @@
   background-image: url("http://admin.qq.im/static/images/zan.png");
   background-repeat: no-repeat;
 }
+.icon_no{
+  background-image: url("http://admin.qq.im/static/images/zan-hui.png") !important;
+}
+
 .love{
   height: 20rpx;
   width: 20rpx;
