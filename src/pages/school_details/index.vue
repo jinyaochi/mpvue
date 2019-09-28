@@ -108,7 +108,8 @@
   },
   methods: {
     toyuyue(){
-      this.$location.navigate('/pages/sign_subscribe/main');
+        let _this = this;
+        this.$location.navigate('/pages/sign_subscribe/main?id='+_this.id);
     },
     zanzan(cid = 0){
       let _this = this;

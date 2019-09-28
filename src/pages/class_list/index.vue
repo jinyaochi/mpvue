@@ -7,26 +7,26 @@
     <div class="class-head">
       <div class="class-one">
         <div>
-          <p>第一期  表音密码  共10节</p>
+          <p>{{category.name}}</p>
           <ul class="class-li">
             <li>
               <div class="class-li-zan love"></div>
-              <div>1.2w</div>
+              <div>{{category.collect}}</div>
             </li>
             <li>
               <div class="class-li-zan good class-li-zan-choose"></div>
-              <div>1.2w</div>
+              <div>{{category.zan}}</div>
             </li>
             <li>
               <div class="class-li-zan look"></div>
-              <div>1.2w</div>
+              <div>{{category.view}}</div>
             </li>
           </ul>
         </div>
       </div>
       <div class="class-two">
         <div>
-          <p>286元/期</p>
+          <p>{{category.price}}元/期</p>
           <div class="class-but">购买</div>
         </div>
       </div>
@@ -36,24 +36,14 @@
           -->
       <div class="inContainer">
         <ul class="map-shop">
-          <li>
-            <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
+          <li v-for="item in category.goods" :key="key" @click="todetail(item.id)">
+            <img :src="item.cover" alt="">
             <div class="map-shop-font">
               <div>
-                <h1>能动英语清河店</h1>
+                <h1>{{item.name}}</h1>
               </div>
-              <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-              <div class="blue">免费</div>
-            </div>
-          </li>
-          <li>
-            <img src="http://admin.qq.im/static/images/map-img.jpg" alt="">
-            <div class="map-shop-font">
-              <div>
-                <h1>能动英语清河店</h1>
-              </div>
-              <p>北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室北京市海淀区杏石口路56号B座2层 201室</p>
-              <div class="orange">付费</div>
+              <p>{{item.intro}}</p>
+              <div class="blue">{{item.pay}}</div>
             </div>
           </li>
         </ul>
@@ -61,7 +51,7 @@
     </div>
 
 
-    <bottomnav></bottomnav>
+    <bottomnav :type="type"></bottomnav>
   </div>
 
 </template>
@@ -71,13 +61,35 @@
   import bottomnav from '@/components/footer.vue';
 
   export default {
+  onLoad(){
+      var _this = this;
+      _this.id = this.getQuery().id;
+      this.$net.post({
+          url: 'category/'+_this.id,
+          data: {}
+      }).then(res => {
+          _this.category = res.data;
+      })
+
+  },
   data () {
     return {
-
+        id:0,
+        type:3,
+        category:[],
     }
   },
   methods: {
-
+      todetail(id){
+          this.$location.navigate('/pages/video_details/main?id='+id);
+      },
+      getQuery() {
+          /* 获取当前路由栈数组 */
+          const pages = getCurrentPages()
+          const currentPage = pages[pages.length - 1]
+          const options = currentPage.options
+          return options
+      }
   },
   components: {
     bottomnav

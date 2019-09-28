@@ -29,11 +29,20 @@
   data () {
     return {
       tips: '获取验证码',
+      id: 0,
       name: '',
       guard: '',
       mobile: '',
       code: ''
     }
+  },
+  onLoad(){
+      let _this = this;
+      _this.id = this.getQuery().id;
+      this.name = '';
+      this.mobile = '';
+      this.guard = '';
+      this.code = '';
   },
   methods: {
     appoint(){
@@ -41,8 +50,9 @@
       _this.$net.post({
         url: 'appoint/1',
         data: {
-          mobile:this.name,
-          mobile:this.guard,
+          sid:this.id,
+          name:this.name,
+          content:this.guard,
           mobile:this.mobile,
           code:this.code,
         }
@@ -55,9 +65,14 @@
           })
         }
 
-        mpvue.setStorageSync('token', res.data.access_token)
-
-        _this.$location.rediect('/pages/mine/main');
+          wx.showToast({
+              title: res.info,
+              icon: 'none',
+              duration: 2000
+          })
+          setTimeout(function () {
+              _this.$location.backto(1);
+          },1000);
       })
     },
     getcode(){
@@ -93,6 +108,13 @@
         delta: 1
       })
     },
+    getQuery() {
+        /* 获取当前路由栈数组 */
+        const pages = getCurrentPages()
+        const currentPage = pages[pages.length - 1]
+        const options = currentPage.options
+        return options
+    }
   },
 
   created () {

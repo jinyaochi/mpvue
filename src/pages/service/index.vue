@@ -30,16 +30,20 @@
       content: '',
     }
   },
+  onLoad(){
+      this.name = '';
+      this.mobile = '';
+      this.content = '';
+  },
   methods: {
     appoint(){
       let _this = this;
       _this.$net.post({
-        url: 'appoint/1',
+        url: 'appoint/2',
         data: {
-          mobile:this.name,
-          mobile:this.guard,
+          name:this.name,
           mobile:this.mobile,
-          code:this.code,
+          content:this.content,
         }
       }).then(res => {
         if(!res.status){
@@ -49,10 +53,14 @@
             duration: 2000
           })
         }
-
-        mpvue.setStorageSync('token', res.data.access_token)
-
-        _this.$location.rediect('/pages/mine/main');
+          wx.showToast({
+              title: res.info,
+              icon: 'none',
+              duration: 2000
+          })
+          setTimeout(function () {
+              _this.$location.backto(1);
+          },1000);
       })
     },
   },

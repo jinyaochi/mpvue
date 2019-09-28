@@ -28,7 +28,7 @@
               </div>
               <p @click="tomap(item.lat,item.lng)">{{item.full_address}} {{item.location}}</p>
               <button class="details-botton call_btn" open-type="contact">现在咨询</button>
-              <div class="details-botton" @click="toyuyue">预约体验</div>
+              <div class="details-botton" @click="toyuyue(item.id)">预约体验</div>
             </div>
           </li>
 
@@ -94,8 +94,8 @@
     }
   },
   methods: {
-    toyuyue(){
-      this.$location.navigate('/pages/sign_subscribe/main');
+    toyuyue(id){
+      this.$location.navigate('/pages/sign_subscribe/main?id='+id);
     },
     backto(index = 1){
       this.$location.backto(index);

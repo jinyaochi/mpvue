@@ -2,7 +2,7 @@
   <div class="online">
     <div v-for="(item, index) in categorys" :class="'online-time time'+(index+1)">
       <div class="font">
-        <div>
+        <div @click="togoodslist(item.id)">
         <p>
             <span>{{item.name}}</span>
         </p>
@@ -46,7 +46,9 @@
     }
   },
   methods: {
-
+      togoodslist(id){
+          this.$location.navigate('/pages/class_list/main?id='+id);
+      }
   },
   components: {
       bottomnav

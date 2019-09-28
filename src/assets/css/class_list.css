@@ -12,6 +12,7 @@
   width: 100%;
   position: absolute;
   top: 500rpx;
+  padding-bottom: 115rpx;
 }
 .class-head .center{
   line-height: 130rpx;
