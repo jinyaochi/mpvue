@@ -12,7 +12,7 @@
       <textarea class="sign-textarea" v-model="content" placeholder="反馈问题" placeholder-class="placeholder"></textarea>
 
     </div>
-    <div class="sign-button" @click="appoint">立即提交</div><!-- 微信登陆 -->
+    <div class="sign-button sign-button-top" @click="appoint">立即提交</div><!-- 微信登陆 -->
   </div>
 
 </template>

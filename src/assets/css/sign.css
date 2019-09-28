@@ -86,7 +86,9 @@
   border-radius: 70rpx;
   margin-top: 180rpx;
 }
-
+.sign-button-top{
+  margin-top: 45rpx;
+}
 .sign-button2{
   margin-top: 75rpx;
   background: rgba(255,255,255,0);

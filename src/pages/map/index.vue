@@ -14,7 +14,7 @@
     </map>
     <div class="details-box">
       <div class="details-title title">
-        <div class="title-center">距您10KM 共 {{nearnum}}个分校</div>
+        <div class="title-center">距您&nbsp;10KM&nbsp;共&nbsp;{{nearnum}}&nbsp;个分校</div>
       </div>
 
       <div class="details-content box-top">
