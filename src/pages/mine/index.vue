@@ -12,17 +12,17 @@
     </div>
     <ul class="mine-choose">
       <li>
-        <a href="">
+        <a href="/pages/start/main">
           <img src="http://admin.qq.im/static/images/mine-img1.png" alt="">我的收藏
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/pages/buy/main">
           <img src="http://admin.qq.im/static/images/mine-img2.png" alt="">我的购买
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/pages/service/main">
           <img src="http://admin.qq.im/static/images/mine-img3.png" alt="">联系客服
         </a>
       </li>
@@ -32,7 +32,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/pages/set/main">
           <img src="http://admin.qq.im/static/images/mine-img5.png" alt="">设置
         </a>
       </li>

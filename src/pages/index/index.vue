@@ -6,7 +6,7 @@
     <div class="inContainer">
       <div class="logo"><img src="http://admin.qq.im/static/images/logo.png" alt="" mode="widthFix"></div>
 
-      <div v-for="(item, index) in lists" class="subject clearfix mb-35">
+      <div v-for="(item, index) in lists" class="subject clearfix mb-35" @click="todetail(item.id)">
         <a class="image mt-10 mb-20" href="">
           <img :src="item.cover" width="100%" height="100%" mode="widthFix"/>
         </a>
@@ -56,7 +56,9 @@
     }
   },
   methods: {
-
+      todetail(id){
+          this.$location.navigate('/pages/video_details/main?id='+id);
+      },
   },
   components: {
     bottomnav

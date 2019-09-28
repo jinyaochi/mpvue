@@ -1,50 +1,21 @@
 <template>
   <div>
     <div class="inContainer">
-      <div class="buy-return">
+      <div class="buy-return" @click="backto">
         <img src="/static/images/return.png" alt="" mode="widthFix">
         我的收藏
       </div>
-      <div class="subject clearfix mb-35">
-        <a class="image mt-10 mb-20" href="">
-          <img src="http://admin.qq.im/static/images/index-img1.jpg" width="100%" height="100%" mode="widthFix"/>
-        </a>
-        <div class="font">
-          <h1>单词记不住，会说不会写</h1>
-          <div>
-            <a href=""><span>1.2w</span><span class="icon love"></span></a>
-            <a href=""><span>1.4 </span><span class="icon good"></span></a>
-            <a href=""><span>100</span><span class="icon look"></span></a>
-          </div>
-        </div>
-        <div class="head-img delete">删除</div>
 
-      </div>
-      <div class="subject clearfix mb-35">
+      <div class="subject clearfix mb-35" v-for="item in goods" :key="key" @click="todetail(item.id)">
         <a class="image mt-10 mb-20" href="">
-          <img src="http://admin.qq.im/static/images/index-img2.jpg" width="100%" height="100%" mode="widthFix"/>
+          <img :src="item.cover" width="100%" height="100%" mode="widthFix"/>
         </a>
         <div class="font">
-          <h1>单词记不住，会说不会写</h1>
+          <h1>{{item.name}}</h1>
           <div>
-            <a href=""><span>1.2w</span><span class="icon love"></span></a>
-            <a href=""><span>1.4 </span><span class="icon good"></span></a>
-            <a href=""><span>100</span><span class="icon look"></span></a>
-          </div>
-        </div>
-        <div class="head-img delete">删除</div>
-
-      </div>
-      <div class="subject clearfix mb-35">
-        <a class="image mt-10 mb-20" href="">
-          <img src="http://admin.qq.im/static/images/index-img3.jpg" width="100%" height="100%" mode="widthFix"/>
-        </a>
-        <div class="font">
-          <h1>单词记不住，会说不会写</h1>
-          <div>
-            <a href=""><span>1.2w</span><span class="icon love"></span></a>
-            <a href=""><span>1.4 </span><span class="icon good"></span></a>
-            <a href=""><span>100</span><span class="icon look"></span></a>
+            <a href=""><span>{{item.collect}}</span><span class="icon love"></span></a>
+            <a href=""><span>{{item.zan}}</span><span class="icon good"></span></a>
+            <a href=""><span>{{item.view}}</span><span class="icon look"></span></a>
           </div>
         </div>
         <div class="head-img delete">删除</div>
@@ -66,11 +37,27 @@
   export default {
   data () {
     return {
-
+        goods: [],
     }
   },
-  methods: {
+  mounted(){
+      let _this = this;
 
+      _this.$net.post({
+          url: 'mycollect',
+          data: {
+          }
+      }).then(res => {
+          _this.goods = res.data;
+      })
+  },
+  methods: {
+      backto(index = 1){
+          this.$location.backto(index);
+      },
+      todetail(id){
+          this.$location.navigate('/pages/video_details/main?id='+id);
+      },
   },
   components: {
     bottomnav
