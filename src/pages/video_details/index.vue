@@ -9,8 +9,8 @@
     <div class="inContainer">
       <div class="clearfix">
         <div class="font">
-            <a @click="tocollect"><span>{{goods.collect}}</span><span :class="'icon love' + (goods.selfcollect ? '' :'icon_no')"></span></a>
-            <a @click="tozan" href=""><span>{{goods.zan}}</span><span :class="'icon good' + (goods.selfzan ? '' :'icon_no')"></span></a>
+            <a @click="tocollect"><span>{{goods.collect}}</span><span :class="'icon love ' + (goods.selfcollect ? '' :'icon_no')"></span></a>
+            <a @click="tozan" href=""><span>{{goods.zan}}</span><span :class="'icon good ' + (goods.selfzan ? '' :'icon_no')"></span></a>
             <a href=""><span>{{goods.view}}</span><span class="icon look"></span></a>
         </div>
         <div class="head-img">
@@ -118,6 +118,8 @@
                   }).then(res => {
                       _this.goods.selfcollect = res.data.selfcollect;
                       _this.goods.selfzan = res.data.selfzan;
+                      _this.goods.zan = res.data.zan;
+                      _this.goods.collect = res.data.collect;
                   })
               })
           },
@@ -134,6 +136,8 @@
                   }).then(res => {
                       _this.goods.selfcollect = res.data.selfcollect;
                       _this.goods.selfzan = res.data.selfzan;
+                      _this.goods.zan = res.data.zan;
+                      _this.goods.collect = res.data.collect;
                   })
               })
           },
