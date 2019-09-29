@@ -9,18 +9,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align:center!important;
+}
 
-}
-.head-border{
-  width: 150rpx;
-  height: 150rpx;
-  border-radius: 50%;
-  border: 10rpx solid #cac2ad;
-}
 
 .head-top>div img{
-  width: 150rpx;
-  height: 150rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 10rpx solid #cccccc;
+  background: rgba( 255,255,255,0.3 );
 }
 .head-top>div p{
   margin-top:35rpx;

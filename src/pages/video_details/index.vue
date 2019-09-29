@@ -3,9 +3,9 @@
     <div class="video_top"></div>
     <video  class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
     <div class="inContainer video_blue">
-      <p>{{goods.intro}}</p>
-      <span>简介</span>
-    </div>
+    <p>{{goods.intro}}</p>
+    <span>简介</span>
+  </div>
     <div class="inContainer">
       <div class="clearfix">
         <div class="font">

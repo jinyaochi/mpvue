@@ -6,7 +6,7 @@
         <p>
             <span>{{item.name}}</span>
         </p>
-        <div class="felling">
+        <div class="felling mt-10">
           <a href=""><span>{{item.collect}}</span><span class="icon icon-white love"></span></a>
           <a href=""><span>{{item.zan}} </span><span class="icon icon-white good"></span></a>
           <a href=""><span>{{item.view}}</span><span class="icon icon-white look"></span></a>
