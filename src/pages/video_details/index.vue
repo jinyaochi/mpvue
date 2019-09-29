@@ -16,7 +16,8 @@
             <a @click="tozan" href=""><span>{{goods.zan}}</span><span :class="'icon good ' + (goods.selfzan ? '' :'icon_no')"></span></a>
             <a href=""><span>{{goods.view}}</span><span class="icon look"></span></a>
         </div>
-        <div class="head-img">
+        <div class="head-img" style="position: relative;">
+          <button open-type="share" style="position: absolute; top:0; left: 0;right: 0;bottom: 0; opacity: 0;"></button>
           <img src="/static/images/video-share.png" mode="widthFix" alt="">
         </div>
       </div>
@@ -210,6 +211,9 @@
           startrun(time = null){
               var _this = this;
               //判断分享或支付
+              if(_this.goods.id){
+
+              }
 
           },
           showcomment(pid = 0,rid = 0,name = ''){
@@ -223,9 +227,9 @@
           var that = this;
 
           var shareObj = {
-              title: that.name,
-              path: '/pages/video_details/main?id='+that.id,
-              imageUrl: that.cover2,
+              title: that.goods.name,
+              path: '/pages/video_details/main?id='+that.goods.id,
+              imageUrl: that.goods.cover,
               success(){
                   console.log(11232);
               },
