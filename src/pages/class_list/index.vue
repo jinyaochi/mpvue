@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="class-img">
-      <img src="http://admin.qq.im/static/images/online-head.jpg" width="100%" height="100%" mode="widthFix"/>
+      <img src="http://admin.qq.im/static/images/buy-img.jpg" width="100%" height="100%" mode="widthFix"/>
     </div>
 
     <div class="class-head">

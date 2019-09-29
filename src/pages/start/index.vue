@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!--- 苹果x适配 ----->
+    <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
+    <!---------------->
     <div class="inContainer">
       <div class="buy-return" @click="backto">
         <img src="/static/images/return.png" alt="" mode="widthFix">
@@ -19,9 +22,10 @@
           </div>
         </div>
         <div class="head-img delete">删除</div>
-
       </div>
-
+      <div class="is-none">
+        <img class="is-none-img" src="http://admin.qq.im/static/images/start-none.png" mode="widthFix"/>
+      </div>
     </div>
 
     <bottomnav></bottomnav>
@@ -38,6 +42,7 @@
   data () {
     return {
         goods: [],
+        isIphoneX: this.globalData.isIphoneX //适配iphonex
     }
   },
   mounted(){

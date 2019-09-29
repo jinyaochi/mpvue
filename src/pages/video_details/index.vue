@@ -1,5 +1,8 @@
 <template>
-  <div class="">
+  <div>
+    <!--- 苹果x适配 ----->
+    <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
+    <!---------------->
     <div class="video_top"></div>
     <video  class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
     <div class="inContainer video_blue">
@@ -56,6 +59,11 @@
         </li>
 
       </ul>
+
+      <div class="is-none" style="height:25vh">
+        <img class="is-none-img" src="http://admin.qq.im/static/images/start-none.png" mode="widthFix"/>
+      </div>
+
       <div style="height: 110rpx"></div>
       <div class="comment-inp2">
         <input type="text" placeholder="我来说几句" placeholder-class="comment-inp-color" disabled @click="showcomment()">
@@ -102,6 +110,7 @@
               comment_show: false,
               comments: [],
               goods:[],
+              isIphoneX: this.globalData.isIphoneX //适配iphonex
           }
       },
       methods: {
@@ -231,3 +240,10 @@
   }
 
 </script>
+<style>
+  .isIphoneX-class {
+    padding-top:64rpx;
+    background: #000;
+  }
+
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!--- x 测试 ----->
+    <!--- 苹果x适配 ----->
     <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
     <!---------------->
     <div class="inContainer">
@@ -67,11 +67,6 @@
 
 </script>
 <style>
-
-  .isIphoneX-class {
-    padding-top:46rpx;
-    background: #fff;
-  }
 
 
 

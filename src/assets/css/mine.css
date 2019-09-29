@@ -42,6 +42,18 @@
 .mine-choose li a{ width: 100%; display: inline-block; }
 .mine-choose li img{ width: 23rpx; height: 20rpx; margin-right: 32rpx;}
 
+.mine-choose li a,
+.mine-choose li a:hover,
+.mine-choose li a:active,
+.mine-choose li a:visited,
+.mine-choose li a:link,
+.mine-choose li a:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+}
 
 
 

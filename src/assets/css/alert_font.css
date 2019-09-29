@@ -42,7 +42,8 @@
 
 .choose div:first-child{
   color: #000;
-  border: 1rpx solid #ccc;
+  height:72rpx;
+  border: 2rpx solid #ccc;
   margin-right:40rpx;
   float:left;
 }

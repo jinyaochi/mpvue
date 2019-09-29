@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 .details-title{
-  width: calc( 100% - 90rpx );
+  width: calc( 100% - 89rpx );
   min-height: 200rpx;
   color: #ffffff;
   font-size: 24rpx;
@@ -57,7 +57,7 @@
 .details-content{
   position: relative;
   top: -116rpx;
-  width: calc( 100% - 90rpx );
+  width: calc( 100% - 89rpx );
   color: #666;
   padding: 0 45rpx;
   background: #fff;
