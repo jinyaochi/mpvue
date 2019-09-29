@@ -1,6 +1,6 @@
 <template>
   <div class="rwm-box">
-    <img class="rwm" src="" alt="" mode="widthFix">
+    <img class="rwm" :src="user.minicode" alt="" mode="widthFix">
   </div>
 
 </template>
@@ -10,9 +10,18 @@
 
 
   export default {
+  onLoad(){
+    let _this = this;
+    _this.$net.post({
+      url: 'user',
+      data: {}
+    }).then(res => {
+      _this.user = res.data;
+    })
+  },
   data () {
     return {
-
+      user: {}
     }
   },
   methods: {

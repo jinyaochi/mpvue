@@ -26,7 +26,7 @@
           <img src="http://admin.qq.im/static/images/mine-img3.png" alt="">联系客服
         </a>
       </li>
-      <li>
+      <li v-if="user && user.minicode">
         <a href="/pages/rwm/main">
           <img src="http://admin.qq.im/static/images/mine-img4.png" alt="">我的二维码
         </a>

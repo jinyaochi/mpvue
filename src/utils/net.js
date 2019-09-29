@@ -16,6 +16,9 @@ function request (url, method, data = {},sign = true) {
       success: function (res) {
         if(res.statusCode == 401 && sign){
           return request ('refresh', 'POST', {},false).then(res => {
+            if(res.status == 0){
+              return tologin();
+            }
             res.data.access_token && (mpvue.setStorageSync('token', res.data.access_token) || 1) && request (url, method, data,false).then(res => {
               resolve(res)
             }).catch((res) => {
@@ -36,7 +39,12 @@ function request (url, method, data = {},sign = true) {
   })
 }
 function tologin() {
-  console.log('令牌时间过期 重新启动小程序');
+  return wx.showToast({
+    title: '未登录',
+    icon: 'none',
+    duration: 2000
+  })
+  // this.$location.navigate('/pages/mine/main?back=1');
 }
 
 function get (obj) {
