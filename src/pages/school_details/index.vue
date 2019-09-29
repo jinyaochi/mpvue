@@ -55,7 +55,9 @@
             </li>
 
           </ul>
-
+          <div class="is-none" style="height:25vh" v-if="comments.length == 0">
+            <img class="is-none-img" src="http://admin.qq.im/static/images/write-none.png" mode="widthFix"/>
+          </div>
 
         </div>
       </div>

@@ -14,7 +14,7 @@
               <div>{{category.collect}}</div>
             </li>
             <li>
-              <div class="class-li-zan good class-li-zan-choose"></div>
+              <div class="class-li-zan good"></div>
               <div>{{category.zan}}</div>
             </li>
             <li>
