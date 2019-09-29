@@ -55,8 +55,8 @@
   background-image: url("http://admin.qq.im/static/images/zan-white.png");
   background-repeat: no-repeat;
 }
-/* 最初
-*/
+/* 最初 */
+
 
 .online-time .one-body{
   width: 100%;
@@ -107,8 +107,8 @@
 
 /* 更改
 
-@media screen and ( min-width:376rpx ){
-  .online-time> .font{ height: 285rpx; }
+@media screen and ( min-width:376px ){
+  .online-time> .font{ height: 285px; }
 
 
   @keyframes myfirst1
@@ -141,58 +141,131 @@
 
 
 }
-*/
+ */
 
 
-/* px 修改
+/* px 修改 */
+@media screen and ( max-height:667px ) {
+    .online-time .one-body {
+      width: 100%;
+      height: 270rpx;
+    }
 
-.online-time .one-body{
-  width: 100%;
-  height: 270rpx;
-}
-.online-time> .font{
-  position: absolute;
-  width: 100%;
-  height: 280rpx;
-  color: #fff;
-  font-size: 27rpx;
-  z-index: 999;
+    .online-time > .font {
+      position: absolute;
+      width: 100%;
+      height: 280rpx;
+      color: #fff;
+      font-size: 27rpx;
+      z-index: 999;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .time1 {
+      animation: myfirst1 0.7s;
+      bottom: 580rpx;
+    }
+
+    .time2 {
+      animation: myfirst2 1s;
+      bottom: 370rpx;
+    }
+
+    .time3 {
+      animation: myfirst3 1.2s;
+      bottom: 150rpx;
+    }
+
+    @keyframes myfirst1 {
+      0% {
+        bottom: 0%;
+      }
+      100% {
+        bottom: 580rpx;
+      }
+    }
+    @keyframes myfirst2 {
+      0% {
+        bottom: 0%;
+      }
+      100% {
+        bottom: 370rpx;
+      }
+    }
+    @keyframes myfirst3 {
+      0% {
+        bottom: 0%;
+      }
+      100% {
+        bottom: 150rpx;
+      }
+    }
+
 }
 
-.time1{
-  animation:myfirst1 0.5s;
-  bottom:620rpx;
-}
-.time2{
-  animation:myfirst2 0.5s;
-  bottom:400rpx;
-}
-.time3{
-  animation:myfirst3 0.5s;
-  bottom:180rpx;
-}
+@media screen and ( max-height:736px ) and ( min-height:668px ) {
+  .online-time .one-body {
+    width: 100%;
+    height: 290rpx;
+  }
 
-@keyframes myfirst1
-{
-  0%   {bottom:0%;}
-  100% {bottom:620rpx;}
-}
-@keyframes myfirst2
-{
-  0%   {bottom:0%;}
-  100% {bottom:400rpx;}
-}
-@keyframes myfirst3
-{
-  0%   {bottom:0%;}
-  100% {bottom:180rpx;}
-}
-*/
+  .online-time > .font {
+    position: absolute;
+    width: 100%;
+    height: 290rpx;
+    color: #fff;
+    font-size: 27rpx;
+    z-index: 999;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .time1 {
+    animation: myfirst1 0.7s;
+    bottom: 620rpx!important;
+  }
+
+  .time2 {
+    animation: myfirst2 1s;
+    bottom: 410rpx;
+  }
+
+  .time3 {
+    animation: myfirst3 1.2s;
+    bottom: 180rpx;
+  }
+
+  @keyframes myfirst1 {
+    0% {
+      bottom: 0%;
+    }
+    100% {
+      bottom: 620rpx!important;
+    }
+  }
+  @keyframes myfirst2 {
+    0% {
+      bottom: 0%;
+    }
+    100% {
+      bottom: 410rpx;
+    }
+  }
+  @keyframes myfirst3 {
+    0% {
+      bottom: 0%;
+    }
+    100% {
+      bottom: 180rpx;
+    }
+  }
+
+}
 
 
 

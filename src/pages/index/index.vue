@@ -26,8 +26,6 @@
 
     </div>
 
-    <div class=""></div>
-
     <bottomnav :type="type"></bottomnav>
   </div>
 
