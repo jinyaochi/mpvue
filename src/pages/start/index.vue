@@ -23,7 +23,7 @@
         </div>
         <div class="head-img delete">删除</div>
       </div>
-      <div class="is-none">
+      <div class="is-none" v-if="goods.length == 0">
         <img class="is-none-img" src="http://admin.qq.im/static/images/start-none.png" mode="widthFix"/>
       </div>
     </div>
