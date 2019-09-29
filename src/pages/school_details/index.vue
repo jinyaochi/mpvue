@@ -2,7 +2,7 @@
   <div>
       <div class="parent" @click="backto"></div>
       <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
-        <block v-for="(item, index) in school.images" :index="index" :key="key">
+        <block v-for="(item, index) in school.images2" :index="index" :key="key">
           <swiper-item>
             <image style="width:100%;" :src="item" class="slide-image" mode="widthFix"/>
           </swiper-item>
