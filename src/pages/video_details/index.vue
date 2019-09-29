@@ -221,15 +221,10 @@
       },
       onShareAppMessage(options){
           var that = this;
-          that.$net.post({
-              url: 'share/'+that.id,
-              data: {}
-          }).then(res => {
-              that.isshare = 1;
-          })
+
           var shareObj = {
-              title: that.title,
-              path: '/pages/video-details-introduce/main?id='+that.id,
+              title: that.name,
+              path: '/pages/video_details/main?id='+that.id,
               imageUrl: that.cover2,
               success(){
                   console.log(11232);

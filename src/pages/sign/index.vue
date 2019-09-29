@@ -46,8 +46,9 @@
       _this.$net.post({
         url: 'mobile/login',
         data: {
-          mobile:this.mobile,
-          code:this.code,
+          mobile:_this.mobile,
+          code:_this.code,
+          member:mpvue.getStorageSync('member'),
         }
       }).then(res => {
         if(!res.status){

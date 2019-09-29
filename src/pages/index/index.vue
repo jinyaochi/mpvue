@@ -35,13 +35,12 @@
   import '@/assets/css/index.css';
   import bottomnav from '@/components/footer.vue';
 
-
-
-
   export default {
   onLoad(){
     let _this = this;
-    _this.$net.post({
+      let member = this.getQuery().uid || 0;
+      (member && mpvue.setStorageSync('member', member)) || mpvue.setStorageSync('member', null)
+      _this.$net.post({
       url: 'index',
       data: {}
     }).then(res => {
@@ -58,6 +57,13 @@
   methods: {
       todetail(id){
           this.$location.navigate('/pages/video_details/main?id='+id);
+      },
+      getQuery() {
+          /* 获取当前路由栈数组 */
+          const pages = getCurrentPages()
+          const currentPage = pages[pages.length - 1]
+          const options = currentPage.options
+          return options
       },
   },
   components: {

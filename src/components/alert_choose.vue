@@ -40,8 +40,9 @@
                         _this.$net.post({
                             url: 'wx/login',
                             data: {
-                                'code': res.code,
-                                'detail':e.mp.detail.userInfo
+                                code: res.code,
+                                member:mpvue.getStorageSync('member'),
+                                detail:e.mp.detail.userInfo
                             }
                         }).then(res => {
                             mpvue.setStorageSync('token', res.data.access_token)
