@@ -69,8 +69,8 @@
 <style>
 
   .isIphoneX-class {
-    padding-top:64rpx;
-    background: red;
+    padding-top:46rpx;
+    background: #fff;
   }
 
 

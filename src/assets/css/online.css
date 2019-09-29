@@ -19,34 +19,6 @@
   height: 200rpx;
   /*background: aquamarine;*/
 }
-.time1{
-  animation:myfirst1 0.5s;
-  bottom:50%;
-}
-.time2{
-  animation:myfirst2 0.5s;
-  bottom:33%;
-}
-.time3{
-  animation:myfirst3 0.5s;
-  bottom:15%;
-}
-
-@keyframes myfirst1
-{
-  0%   {bottom:0%;}
-  100% {bottom:50%;}
-}
-@keyframes myfirst2
-{
-  0%   {bottom:0%;}
-  100% {bottom:33%;}
-}
-@keyframes myfirst3
-{
-  0%   {bottom:0%;}
-  100% {bottom:15%;}
-}
 
 .felling{
   text-align: center;
@@ -79,6 +51,13 @@
   border-left:375rpx solid transparent;
   border-bottom:140rpx solid #ef9c3b;
 }
+.icon-white{
+  background-image: url("http://admin.qq.im/static/images/zan-white.png");
+  background-repeat: no-repeat;
+}
+/* 最初
+*/
+
 .online-time .one-body{
   width: 100%;
   height: 380rpx;
@@ -95,10 +74,130 @@
   justify-content: center;
   align-items: center;
 }
-.icon-white{
-  background-image: url("http://admin.qq.im/static/images/zan-white.png");
-  background-repeat: no-repeat;
+
+.time1{
+  animation:myfirst1 0.5s;
+  bottom:50%;
 }
+.time2{
+  animation:myfirst2 0.5s;
+  bottom:33%;
+}
+.time3{
+  animation:myfirst3 0.5s;
+  bottom:15%;
+}
+
+@keyframes myfirst1
+{
+  0%   {bottom:0%;}
+  100% {bottom:50%;}
+}
+@keyframes myfirst2
+{
+  0%   {bottom:0%;}
+  100% {bottom:33%;}
+}
+@keyframes myfirst3
+{
+  0%   {bottom:0%;}
+  100% {bottom:15%;}
+}
+
+
+/* 更改
+
+@media screen and ( min-width:376rpx ){
+  .online-time> .font{ height: 285rpx; }
+
+
+  @keyframes myfirst1
+  {
+    0%   {bottom:0%;}
+    100% {bottom:43%;}
+  }
+  @keyframes myfirst2
+  {
+    0%   {bottom:0%;}
+    100% {bottom:27%;}
+  }
+  @keyframes myfirst3
+  {
+    0%   {bottom:0%;}
+    100% {bottom:11%;}
+  }
+  .time1{
+    animation:myfirst1 0.5s;
+    bottom:43%;
+  }
+  .time2{
+    animation:myfirst2 0.5s;
+    bottom:27%;
+  }
+  .time3{
+    animation:myfirst3 0.5s;
+    bottom:11%;
+  }
+
+
+}
+*/
+
+
+/* px 修改
+
+.online-time .one-body{
+  width: 100%;
+  height: 270rpx;
+}
+.online-time> .font{
+  position: absolute;
+  width: 100%;
+  height: 280rpx;
+  color: #fff;
+  font-size: 27rpx;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time1{
+  animation:myfirst1 0.5s;
+  bottom:620rpx;
+}
+.time2{
+  animation:myfirst2 0.5s;
+  bottom:400rpx;
+}
+.time3{
+  animation:myfirst3 0.5s;
+  bottom:180rpx;
+}
+
+@keyframes myfirst1
+{
+  0%   {bottom:0%;}
+  100% {bottom:620rpx;}
+}
+@keyframes myfirst2
+{
+  0%   {bottom:0%;}
+  100% {bottom:400rpx;}
+}
+@keyframes myfirst3
+{
+  0%   {bottom:0%;}
+  100% {bottom:180rpx;}
+}
+*/
+
+
+
+
+
+
 
 
 
