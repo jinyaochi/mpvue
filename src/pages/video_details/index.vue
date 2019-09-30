@@ -4,7 +4,7 @@
     <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
     <!---------------->
     <div class="video_top"></div>
-    <video  class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
+    <video id="myvideo" class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
     <div class="inContainer video_blue">
     <p>{{goods.intro}}</p>
     <span>简介</span>
@@ -102,6 +102,8 @@
           }).then(res => {
               _this.comments = res.data;
           })
+        this.videoCtx = wx.createVideoContext('myvideo', this)
+
 
       },
       data () {
@@ -210,8 +212,31 @@
           },
           startrun(time = null){
               var _this = this;
-              //判断分享或支付
-              if(_this.goods.id){
+              if(time && time > 60*5){
+
+                if(_this.goods.pay == '付费'){
+                  //判断是否付费
+                  _this.videoCtx.pause();
+                  return wx.showModal({
+                    title: '提示',
+                    content: '尚未购买确定购买吗',
+                    success(res) {
+
+                    }
+                  })
+                }else{
+                  //判断是否分享
+                  if(!mpvue.getStorageSync('share_'+_this.goods.id)){
+                    _this.videoCtx.pause();
+                    return wx.showModal({
+                      title: '提示',
+                      content: '需要分享才可以观看哦',
+                      success(res) {
+
+                      }
+                    })
+                  }
+                }
 
               }
 
@@ -231,7 +256,7 @@
               path: '/pages/video_details/main?id='+that.goods.id,
               imageUrl: that.goods.cover,
               success(){
-                  console.log(11232);
+                mpvue.setStorageSync('share_'+that.goods.id, 1)
               },
           };
           return shareObj;

@@ -21,7 +21,7 @@
             <a href=""><span>{{item.view}}</span><span class="icon look"></span></a>
           </div>
         </div>
-        <div class="head-img delete">删除</div>
+        <div class="head-img delete"></div>
       </div>
       <div class="is-none" v-if="goods.length == 0">
         <img class="is-none-img" src="http://admin.qq.im/static/images/start-none.png" mode="widthFix"/>
