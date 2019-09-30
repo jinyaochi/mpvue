@@ -1,5 +1,6 @@
 <template>
   <div class="sign">
+    <div class="parent" @click="backto"></div>
     <div class="service-logo">
       <img src="/static/images/service-logo.png" mode="widthFix" alt="">
     </div>
@@ -36,6 +37,11 @@
       this.content = '';
   },
   methods: {
+    backto(){
+      wx.navigateBack({
+        delta: 1
+      })
+    },
     appoint(){
       let _this = this;
       _this.$net.post({

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="parent" @click="backto"></div>
     <!--- 苹果x适配 ----->
     <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
     <!---------------->
@@ -117,6 +118,11 @@
           }
       },
       methods: {
+        backto(){
+          wx.navigateBack({
+            delta: 1
+          })
+        },
           tozan(){
               let _this = this;
               _this.$net.post({

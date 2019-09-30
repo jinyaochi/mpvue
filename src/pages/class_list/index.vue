@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="parent" @click="backto"></div>
     <div class="class-img">
       <img src="http://admin.qq.im/static/images/buy-img.jpg" width="100%" height="100%" mode="widthFix"/>
     </div>
@@ -80,6 +81,11 @@
     }
   },
   methods: {
+    backto(){
+      wx.navigateBack({
+        delta: 1
+      })
+    },
       todetail(id){
           this.$location.navigate('/pages/video_details/main?id='+id);
       },
