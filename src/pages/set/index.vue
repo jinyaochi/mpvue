@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="parent" style="top:40rpx;" @click="backto"></div>
     <div class="set-head"></div>
     <ul class="set-box">
       <li @click="qingchu">清除缓存</li>
@@ -15,6 +16,11 @@
 
 export default {
   methods: {
+    backto(){
+      wx.navigateBack({
+        delta: 1
+      })
+    },
     logout(){
       let _this = this;
       mpvue.setStorageSync('token', '')

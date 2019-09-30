@@ -1,6 +1,6 @@
 <template>
   <div id="box">
-  <div class="parent" @click="backto"></div>
+
     <map
             id="map"
             :longitude="longitude"

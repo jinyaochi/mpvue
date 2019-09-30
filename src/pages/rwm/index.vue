@@ -1,5 +1,6 @@
 <template>
   <div class="rwm-box">
+    <div class="parent" @click="backto"></div>
     <img class="rwm" :src="user.minicode" alt="" mode="widthFix">
   </div>
 
@@ -25,6 +26,11 @@
     }
   },
   methods: {
+    backto(){
+      wx.navigateBack({
+        delta: 1
+      })
+    }
 
   }
 }
