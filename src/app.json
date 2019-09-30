@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/indexnav/main",
     "pages/index/main",
+    "pages/indexnav/main",
     "pages/mine/main",
     "pages/online/main",
     "pages/sign/main",
