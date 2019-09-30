@@ -8,7 +8,7 @@
     <video id="myvideo" class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
     <div class="inContainer video_blue">
     <p>{{goods.intro}}</p>
-    <span>简介</span>
+    <span @click="tojianjie">简介</span>
   </div>
     <div class="inContainer">
       <div class="clearfix">
@@ -118,6 +118,9 @@
           }
       },
       methods: {
+        tojianjie(){
+          this.$location.navigate('/pages/video_intro/main?id='+this.goods.id);
+        },
         backto(){
           wx.navigateBack({
             delta: 1
