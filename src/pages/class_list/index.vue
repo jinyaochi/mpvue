@@ -28,7 +28,7 @@
       <div class="class-two">
         <div>
           <p>{{category.price}}元/期</p>
-          <div class="class-but">购买</div>
+          <a class="class-but" :href="'/pages/buy_class/main?cid='+category.id">购买</a>
         </div>
       </div>
       <!--

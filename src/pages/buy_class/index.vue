@@ -8,21 +8,20 @@
     <div class="class-head">
       <div class="class-one">
         <div>
-          <p class="center">第一期&nbsp;表音密码&nbsp;共10节</p>
+          <p class="center">{{category.name}}</p>
         </div>
       </div>
       <div class="class-two">
         <div>
-          <p>286元/期</p>
-          <div class="class-but">购买</div>
+          <p>{{category.price}}元/期</p>
         </div>
       </div>
 
     </div>
 
     <div class="class-footer">
-      <div>总计&nbsp;&nbsp;<span>286</span> 元</div>
-      <div>微信支付</div>
+      <div>总计&nbsp;&nbsp;<span>{{category.price}}</span> 元</div>
+      <div @click="mkorder">微信支付</div>
     </div>
 
   </div>
@@ -34,17 +33,46 @@
   import '@/assets/css/buy_class.css';
 
   export default {
+    onLoad(){
+      var _this = this;
+      _this.id = this.getQuery().cid;
+      this.$net.post({
+        url: 'category/'+_this.id,
+        data: {}
+      }).then(res => {
+        _this.category = res.data;
+      })
+
+    },
     data () {
       return {
-
+        id:0,
+        category:[],
       }
     },
     methods: {
+      mkorder(){
+        var _this = this;
+
+        _this.$net.post({
+          url: 'mkorder/'+_this.id,
+          data: {}
+        }).then(res => {
+          _this.category = res.data;
+        })
+      },
       backto(){
         wx.navigateBack({
           delta: 1
         })
-      }
+      },
+      getQuery() {
+        /* 获取当前路由栈数组 */
+        const pages = getCurrentPages()
+        const currentPage = pages[pages.length - 1]
+        const options = currentPage.options
+        return options
+      },
     }
   }
 
