@@ -26,15 +26,15 @@
 
   export default {
   data () {
-    return {
-      parentmethod: 'wxlogin',
-      message: '确定授权用户信息吗',
-      mobile: '',
-      is_show: false,
-      tips: '获取验证码',
-      code: ''
-    }
-  },
+      return {
+        parentmethod: 'wxlogin',
+        message: '确定授权用户信息吗',
+        mobile: '',
+        is_show: false,
+        tips: '获取验证码',
+        code: ''
+      }
+    },
   components: {
       alertyes,
       alertchoose,

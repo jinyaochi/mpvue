@@ -17,7 +17,7 @@
   width: 140rpx;
   height: 140rpx;
   border-radius: 50%;
-  border: 10rpx solid #cccccc;
+  border: 10rpx solid rgba( 0,0,0,0.4 );
   background: rgba( 255,255,255,0.3 );
 }
 .head-top>div p{
@@ -40,7 +40,13 @@
   background:#f2f6f9;
 }
 .mine-choose li a{ width: 100%; display: inline-block; }
-.mine-choose li img{ width: 23rpx; height: 20rpx; margin-right: 32rpx;}
+.mine-choose li img{ margin-right: 32rpx;}
+.mine-choose li .icon-1{ width: 30rpx; height: 28rpx; }
+.mine-choose li .icon-2{ width: 33rpx; height: 28rpx; }
+.mine-choose li .icon-3{ width: 30rpx; height: 30rpx; }
+.mine-choose li .icon-4{ width: 30rpx; height: 30rpx; }
+.mine-choose li .icon-5{ width: 35rpx; height: 35rpx; }
+
 
 .mine-choose li a,
 .mine-choose li a:hover,

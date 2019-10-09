@@ -2,15 +2,15 @@
   <div class="online">
     <div v-for="(item, index) in categorys" :class="'online-time time'+(index+1)">
       <div class="font">
-        <div @click="togoodslist(item.id)">
-        <p>
-            <span>{{item.name}}</span>
-        </p>
-        <div class="felling mt-10">
-          <a href=""><span>{{item.collect}}</span><span class="icon icon-white love"></span></a>
-          <a href=""><span>{{item.zan}} </span><span class="icon icon-white good"></span></a>
-          <a href=""><span>{{item.view}}</span><span class="icon icon-white look"></span></a>
-        </div>
+        <div @click="togoodslist(item.id)" style="padding: 50rpx 80rpx ">
+          <p>
+              <span>{{item.name}}</span>
+          </p>
+          <div class="felling mt-10">
+            <a href=""><span>{{item.collect}}</span><span class="icon icon-white love"></span></a>
+            <a href=""><span>{{item.zan}} </span><span class="icon icon-white good"></span></a>
+            <a href=""><span>{{item.view}}</span><span class="icon icon-white look"></span></a>
+          </div>
         </div>
       </div>
       <div class="box">

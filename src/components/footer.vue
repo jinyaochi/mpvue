@@ -19,7 +19,7 @@
           <li :class="type == 3 ? 'footer-choose' : ''">
             <a @click="redirect('/pages/online/main')">
               <i class="footerIcon lineUp"></i>
-              <div>线上试听</div>
+              <div>线上课程</div>
             </a>
           </li>
           <li :class="type == 4 ? 'footer-choose' : ''">
