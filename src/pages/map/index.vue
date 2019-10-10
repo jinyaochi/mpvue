@@ -109,7 +109,7 @@
     tomap(lat,lng){
       this.latitude = lat;
       this.longitude = lng;
-    }
+    },
 
   },
     components: {
@@ -117,4 +117,5 @@
     }
 }
 </script>
+
 
