@@ -90,7 +90,7 @@
           var _this = this;
           _this.id = this.getQuery().id;
           this.$net.post({
-              url: 'goods/'+_this.id,
+              url: 'goods/'+_this.id + '?num=12',
               data: {}
           }).then(res => {
               _this.goods = res.data;
