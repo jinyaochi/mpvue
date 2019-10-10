@@ -70,7 +70,7 @@
     bottomnav
   },
     onShareAppMessage(){
-    
+
     }
 }
 
