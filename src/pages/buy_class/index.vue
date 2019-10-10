@@ -58,7 +58,34 @@
           url: 'mkorder/'+_this.id,
           data: {}
         }).then(res => {
-          _this.category = res.data;
+
+          let replyJson = JSON.parse(res.data.pay_info);
+
+          wx.requestPayment({
+            appId: replyJson.appId,
+            timeStamp: replyJson.timeStamp,
+            nonceStr: replyJson.nonceStr,
+            package: replyJson.package,
+            signType: replyJson.signType,
+            paySign: replyJson.paySign,
+            success: function(res) {
+              wx.showToast({
+                title: '购买成功',
+                icon: 'none',
+                duration: 2000
+              })
+              setTimeout(function () {
+                wx.navigateTo({
+                  url: '/pages/buy/main'
+                })
+              },2000);
+              console.log(res)
+            },
+            fail: function(res) {
+              console.log('付款失败')
+              console.log(res)
+            }
+          })
         })
       },
       backto(){
