@@ -20,7 +20,7 @@
       <div class="details-content box-top">
         <ul class="map-shop">
           <li v-for="item in school" :key="kkk">
-            <img :src="item.images[0]" alt="" @click="tomap(item.lat,item.lng)">
+            <img :src="item.images[0]" alt="" @click="todetail(item.id)">
             <div class="map-shop-font">
               <div @click="todetail(item.id)">
                 <h1>{{item.name}}</h1>

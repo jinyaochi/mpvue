@@ -23,7 +23,7 @@
 .felling{
   text-align: center;
 }
-
+.font_h1{ font-size: 28rpx;}
 .box{ position: relative; height: 500rpx; }
 
 .time1>.box>.one-body{

@@ -147,45 +147,48 @@
 }
 .head-img img{
   float: right;
-  width: 32rpx;
-  height: 25rpx;
+  width: 50rpx;
+  height: 35rpx;
   margin: 40rpx 0;
   display: inline-block;
 }
 .font span{
   display: inline-block;
-  font-size: 19rpx;
+  font-size: 30rpx;
   color:#999;
+  vertical-align:middle;
 }
+
 .icon{
   display: inline-block;
-  margin-left: 5rpx;
-  margin-right: 25rpx;
-  background-image: url("http://admin.qq.im/static/images/zan.png");
+  margin-left: 6rpx;
+  margin-right: 30rpx;
+  background-image: url("http://admin.qq.im/static/images/zan-big.png");
   background-repeat: no-repeat;
 }
 
 .icon_no{
-  background-image: url("http://admin.qq.im/static/images/zan-hui.png") !important;
+  background-image: url("http://admin.qq.im/static/images/zan-big-hui.png") !important;
 }
 
 .love{
-  height: 20rpx;
-  width: 20rpx;
-  background-size:20rpx;
-  background-position:top 3rpx left 0rpx;
+  height: 36rpx;
+  width: 36rpx;
+  background-size:36rpx;
+  background-position:top 0rpx left 0rpx;
 }
 .good{
-  height: 20rpx;
-  width: 20rpx;
-  background-size:20rpx;
-  background-position:top -19rpx left 0rpx;
+  height: 36rpx;
+  width: 36rpx;
+  background-size:36rpx;
+  background-position:top -39rpx left 0rpx;
 }
 .look{
-  height: 20rpx;
-  width: 25rpx;
-  background-size:20rpx;
-  background-position:top -42rpx left 0rpx;
+  height: 40rpx;
+  width: 42rpx;
+  background-size:40rpx;
+  background-position:top -89rpx left 0rpx;
+
 }
 
 
