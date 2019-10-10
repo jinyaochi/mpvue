@@ -14,6 +14,7 @@
       <div class="class-two">
         <div>
           <p>{{category.price}}元/期</p>
+          <a class="class-but" @click="mkorder">购买</a>
         </div>
       </div>
 
