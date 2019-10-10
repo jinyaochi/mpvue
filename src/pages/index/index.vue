@@ -68,7 +68,10 @@
   },
   components: {
     bottomnav
-  }
+  },
+    onShareAppMessage(){
+    
+    }
 }
 
 </script>
