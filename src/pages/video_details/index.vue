@@ -223,14 +223,23 @@
               var _this = this;
               if(time && time > 60*5){
 
+                //判断是否付费
+                if(_this.goods.hasbuy){
+                  return false;
+                }
+
                 if(_this.goods.pay == '付费'){
-                  //判断是否付费
+
                   _this.videoCtx.pause();
                   return wx.showModal({
                     title: '提示',
                     content: '尚未购买确定购买吗',
                     success(res) {
+                      if (res.cancel) {
 
+                      }else{
+                        _this.$location.navigate('/pages/buy_class/main?cid='+_this.goods.category_id);
+                      }
                     }
                   })
                 }else{
