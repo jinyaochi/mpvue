@@ -121,7 +121,11 @@ page,#box{
   overflow-y: auto;
   border-top: 15rpx solid #fff;
 }
-
+@media screen and (min-height: 812px){
+  .details-content{
+    max-height: 628rpx;
+  }
+}
 
 
 
