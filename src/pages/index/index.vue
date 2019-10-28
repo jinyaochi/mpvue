@@ -27,6 +27,7 @@
     </div>
 
     <bottomnav :type="type"></bottomnav>
+    <div v-if="!islogin" @click="tologin" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999999;"></div>
   </div>
 
 </template>
@@ -41,15 +42,26 @@
       let member = this.getQuery().uid || 0;
       (member && mpvue.setStorageSync('member', member)) || mpvue.setStorageSync('member', null)
       _this.$net.post({
-      url: 'index',
-      data: {}
-    }).then(res => {
-      _this.lists = res.data;
-    })
+        url: 'index',
+        data: {}
+      }).then(res => {
+        _this.lists = res.data;
+      })
+      _this.$net.post({
+        url: 'user',
+        data: {}
+      }).then(res => {
+        if(res.status){
+          _this.islogin = 1;
+        }else{
+          _this.islogin = 0;
+        }
+      })
   },
   data () {
     return {
       type: 1,
+      islogin: 0,
       lists : [],
       isIphoneX: this.globalData.isIphoneX //适配iphonex
     }
@@ -57,6 +69,9 @@
   methods: {
       todetail(id){
           this.$location.navigate('/pages/video_details/main?id='+id);
+      },
+      tologin(){
+          this.$location.navigate('/pages/sign/main');
       },
       getQuery() {
           /* 获取当前路由栈数组 */

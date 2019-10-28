@@ -31,7 +31,7 @@ export default {
       })
 
       setTimeout(function () {
-        _this.$location.rediect('/pages/mine/main')
+        _this.$location.rediect('/pages/index/main')
       },1100)
     },
     qingchu(){

@@ -48,6 +48,7 @@
                             mpvue.setStorageSync('token', res.data.access_token)
                             mpvue.setStorageSync('openid', res.data.openid)
                             _this.$location.rediect('/pages/mine/main');
+                            _this.closethis();
 
                         })
                     }
