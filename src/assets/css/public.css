@@ -20,7 +20,7 @@
 .parent{
   width: 80rpx;
   height: 80rpx;
-  background: url("http://admin.qq.im/static/images/return.png") center no-repeat;
+  background: url("https://api.nd115.com/static/images/return.png") center no-repeat;
   background-size: 80rpx;
   z-index: 99999999;
   position: fixed;

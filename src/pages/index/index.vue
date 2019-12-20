@@ -4,7 +4,7 @@
     <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
     <!---------------->
     <div class="inContainer">
-      <div class="logo"><img src="http://admin.qq.im/static/images/logo.png" alt="" mode="widthFix"></div>
+      <div class="logo"><img src="https://api.nd115.com/static/images/logo.png" alt="" mode="widthFix"></div>
 
       <div v-for="(item, index) in lists" class="subject clearfix mb-35" @click="todetail(item.id)">
         <a class="image mt-10 mb-20" href="">

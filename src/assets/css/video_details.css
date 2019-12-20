@@ -163,12 +163,12 @@
   display: inline-block;
   margin-left: 6rpx;
   margin-right: 30rpx;
-  background-image: url("http://admin.qq.im/static/images/zan-big.png");
+  background-image: url("https://api.nd115.com/static/images/zan-big.png");
   background-repeat: no-repeat;
 }
 
 .icon_no{
-  background-image: url("http://admin.qq.im/static/images/zan-big-hui.png") !important;
+  background-image: url("https://api.nd115.com/static/images/zan-big-hui.png") !important;
 }
 
 .love{

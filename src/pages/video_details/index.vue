@@ -49,11 +49,11 @@
 
             <div class="comment-choose">
               <a href="">
-                <span class="comment-img" @click="zanzan(item.id)"><img class="details-img2" :src="'http://admin.qq.im/static/images/details-zan'+(item.selfzan ? '2':'')+'.png'" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
+                <span class="comment-img" @click="zanzan(item.id)"><img class="details-img2" :src="'https://api.nd115.com/static/images/details-zan'+(item.selfzan ? '2':'')+'.png'" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
                 <span>{{item.zan}}</span>
               </a>
               <a href="">
-                <span class="comment-img"><img class="details-img2" src="http://admin.qq.im/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
+                <span class="comment-img"><img class="details-img2" src="https://api.nd115.com/static/images/details-more.png" alt="" mode="aspectFill">&nbsp;&nbsp;</span>
                 <span @click="showcomment(item.id,0,item.name)">回复</span>
               </a>
             </div>
@@ -63,7 +63,7 @@
       </ul>
 
       <div class="is-none" style="height:25vh" v-if="comments.length == 0">
-        <img class="is-none-img" src="http://admin.qq.im/static/images/write-none.png" mode="widthFix"/>
+        <img class="is-none-img" src="https://api.nd115.com/static/images/write-none.png" mode="widthFix"/>
       </div>
 
       <div style="height: 110rpx"></div>

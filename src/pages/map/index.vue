@@ -68,7 +68,7 @@
                   _this.nearnum++;
               }
               _this.markers[s] = {
-                  iconPath: 'http://api.qq.im/static/images/details-pisition.png',
+                  iconPath: 'https://api.nd115.com/static/images/details-pisition.png',
                   id: _this.school[s].id,
                   callout: {
                       content: _this.school[s].name,

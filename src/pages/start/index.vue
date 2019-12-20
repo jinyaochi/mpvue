@@ -24,7 +24,7 @@
         <div class="head-img delete"></div>
       </div>
       <div class="is-none" v-if="goods.length == 0">
-        <img class="is-none-img" src="http://admin.qq.im/static/images/start-none.png" mode="widthFix"/>
+        <img class="is-none-img" src="https://api.nd115.com/static/images/start-none.png" mode="widthFix"/>
       </div>
     </div>
 

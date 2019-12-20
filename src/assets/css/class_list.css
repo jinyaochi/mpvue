@@ -20,7 +20,7 @@
 .class-head .class-one{
   width: 100%;
   height:230rpx;
-  background: url("http://admin.qq.im/static/images/class-one.png") no-repeat;
+  background: url("https://api.nd115.com/static/images/class-one.png") no-repeat;
   background-size: 100%;
   padding-top: 155rpx;
 
@@ -30,7 +30,7 @@
 .class-two{
   width: 100%;
   height:220rpx;
-  background: url("http://admin.qq.im/static/images/class-two.png") no-repeat;
+  background: url("https://api.nd115.com/static/images/class-two.png") no-repeat;
   background-size: 100%;
   padding-top: 170rpx;
   margin-top: -170rpx;
@@ -138,12 +138,12 @@
   color: #e88032;
 }
 .class-li-zan-choose{
-  background-image: url("http://admin.qq.im/static/images/zan.png") !important;
+  background-image: url("https://api.nd115.com/static/images/zan.png") !important;
 }
 .class-li-zan{
   display: inline-block;
   background-repeat: no-repeat;
-  background-image: url("http://admin.qq.im/static/images/zan-white.png");
+  background-image: url("https://api.nd115.com/static/images/zan-white.png");
 }
 .class-li-zan.love{
   height: 40rpx;
