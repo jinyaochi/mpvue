@@ -29,7 +29,7 @@
         <div>
           <p>{{category.price}}元/期</p>
           <a v-if="!category.hasbuy && category.price" class="class-but" :href="'/pages/buy_class/main?cid='+category.id">购买</a>
-          <a v-if="!category.hasbuy && !category.price" class="class-but">现时免费</a>
+          <a v-if="!category.hasbuy && !category.price" class="class-but">限时免费</a>
           <a v-if="category.hasbuy" class="class-but">已购买</a>
         </div>
       </div>
