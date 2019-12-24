@@ -27,7 +27,6 @@
     </div>
 
     <bottomnav :type="type"></bottomnav>
-    <div v-if="!islogin" @click="tologin" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999999;"></div>
   </div>
 
 </template>

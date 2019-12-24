@@ -12,6 +12,7 @@
     </div>
     <div class="sign-button" @click="mobilelogin">立即登录</div><!-- 微信登陆 -->
     <div class="sign-button sign-button2" @click="is_show=true">微信登陆</div><!-- 微信登陆 -->
+    <div class="sign-button sign-button2" @click="nologin">暂不登陆</div><!-- 暂不登录 -->
 
     <alertchoose v-if="is_show" :message="message"></alertchoose>
   </div>
@@ -41,6 +42,11 @@
       alertfont
   },
   methods: {
+    nologin(){
+      wx.navigateBack({
+        delta: 1
+      })
+    },
     mobilelogin(){
       let _this = this;
       _this.$net.post({
