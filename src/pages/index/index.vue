@@ -26,7 +26,7 @@
 
     </div>
 
-    <bottomnav :type="type"></bottomnav>
+    <bottomnav :type="type" :check="check"></bottomnav>
   </div>
 
 </template>
@@ -37,6 +37,7 @@
 
   export default {
   onLoad(){
+    mpvue.setStorageSync('check',0)
     let _this = this;
       let member = this.getQuery().uid || 0;
       (member && mpvue.setStorageSync('member', member)) || mpvue.setStorageSync('member', null)
@@ -45,6 +46,8 @@
         data: {}
       }).then(res => {
         _this.lists = res.data;
+        res.data.check && mpvue.setStorageSync('check',1) && (_this.check = 1)
+
       })
       _this.$net.post({
         url: 'user',
@@ -60,6 +63,7 @@
   data () {
     return {
       type: 1,
+      check: mpvue.getStorageSync('check'),
       islogin: 0,
       lists : [],
       isIphoneX: this.globalData.isIphoneX //适配iphonex

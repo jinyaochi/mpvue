@@ -36,7 +36,7 @@
         </ul>
       </div>
     </div>
-    <bottomnav :type="type"></bottomnav>
+    <bottomnav :type="type" :check="check"></bottomnav>
   </div>
 </template>
 
@@ -89,6 +89,7 @@
       longitude: 116.39987458203123,
       latitude: 39.90915359502086,
       markers: [],
+      check: mpvue.getStorageSync('check'),
       school:[],
       nearnum:0,
     }

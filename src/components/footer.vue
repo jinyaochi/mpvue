@@ -10,13 +10,13 @@
               <div>发现</div>
             </a>
           </li>
-          <li :class="type == 2 ? 'footer-choose' : ''">
+          <li :class="type == 2 ? 'footer-choose' : ''" :style="check ? 'position:relative; left:12%;':''">
             <a @click="redirect('/pages/map/main')">
               <i class="footerIcon lineDown"></i>
               <div>线下试听</div>
             </a>
           </li>
-          <li :class="type == 3 ? 'footer-choose' : ''">
+          <li :class="type == 3 ? 'footer-choose' : ''" :style="check ? 'visibility: hidden;':''">
             <a @click="redirect('/pages/online/main')">
               <i class="footerIcon lineUp"></i>
               <div>线上课程</div>
@@ -36,7 +36,7 @@
 <script>
   import '@/assets/css/footer.css';
   export default {
-    props:['type'],
+    props:['type','check'],
     name: "footer",
     data:{
 

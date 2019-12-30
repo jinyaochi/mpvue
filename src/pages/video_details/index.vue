@@ -5,7 +5,8 @@
     <div class="tab-footer" :class="{'isIphoneX-class': isIphoneX}"></div>
     <!---------------->
     <div class="video_top"></div>
-    <video id="myvideo" class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
+    <video v-if="!check" id="myvideo" class="video_box" :src="goods.video" :poster="goods.cover" @timeupdate="videorun" @play="startrun" controls></video >
+    <img v-if="check" :src="goods.cover" style="width: 100%;" />
     <div class="inContainer video_blue">
     <p>{{goods.name}}</p>
     <span @click="tojianjie" style="float: right">简介</span>
@@ -111,6 +112,7 @@
           return {
               tips: '',
               id: 0,
+              check: mpvue.getStorageSync('check'),
               comment_show: false,
               comments: [],
               goods:[],

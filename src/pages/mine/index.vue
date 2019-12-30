@@ -11,12 +11,12 @@
       </div>
     </div>
     <ul class="mine-choose">
-      <li>
+      <li v-if="!check">
         <a href="/pages/start/main">
           <img class="icon-1" src="https://api.nd115.com/static/images/mine-img1.png" alt="">我的收藏
         </a>
       </li>
-      <li>
+      <li v-if="!check">
         <a href="/pages/buy/main">
           <img class="icon-2" src="https://api.nd115.com/static/images/mine-img2.png" alt="">我的购买
         </a>
@@ -38,7 +38,7 @@
       </li>
     </ul>
 
-    <bottomnav :type="type"></bottomnav>
+    <bottomnav :type="type" :check="check"></bottomnav>
   </div>
 
 </template>
@@ -61,6 +61,7 @@
     data () {
       return {
         type:4,
+        check: mpvue.getStorageSync('check'),
         user: {}
       }
     },
