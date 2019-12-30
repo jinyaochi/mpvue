@@ -44,15 +44,20 @@
     let member = this.getQuery().uid || 0;
       (member && mpvue.setStorageSync('member', member)) || mpvue.setStorageSync('member', null)
       _this.$net.post({
-        url: 'index',
+        url: 'check',
         data: {}
       }).then(res => {
-        _this.lists = res.data;
-        if(res.data.check){
+        if(res != 1){
           mpvue.setStorageSync('check',0)
           _this.check = 0
         }
 
+      });
+      _this.$net.post({
+        url: 'index',
+        data: {}
+      }).then(res => {
+        _this.lists = res.data;
       })
       _this.$net.post({
         url: 'user',
