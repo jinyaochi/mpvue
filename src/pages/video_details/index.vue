@@ -105,6 +105,7 @@
               _this.comments = res.data;
           })
         this.videoCtx = wx.createVideoContext('myvideo', this)
+        _this.check = mpvue.getStorageSync('check')*1;
 
 
       },
@@ -112,10 +113,10 @@
           return {
               tips: '',
               id: 0,
-              check: mpvue.getStorageSync('check'),
               comment_show: false,
               comments: [],
               goods:[],
+              check:1,
               isIphoneX: this.globalData.isIphoneX //适配iphonex
           }
       },

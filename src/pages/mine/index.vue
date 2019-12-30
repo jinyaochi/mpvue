@@ -57,11 +57,12 @@
       }).then(res => {
         _this.user = res.data;
       })
+      _this.check = mpvue.getStorageSync('check')*1;
     },
     data () {
       return {
         type:4,
-        check: mpvue.getStorageSync('check'),
+        check: 1,
         user: {}
       }
     },

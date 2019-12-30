@@ -82,6 +82,9 @@
               };
           }
       })
+
+      _this.check = mpvue.getStorageSync('check')*1;
+
     },
   data () {
     return {
@@ -89,7 +92,7 @@
       longitude: 116.39987458203123,
       latitude: 39.90915359502086,
       markers: [],
-      check: mpvue.getStorageSync('check'),
+      check: 1,
       school:[],
       nearnum:0,
     }

@@ -36,11 +36,10 @@
   import bottomnav from '@/components/footer.vue';
 
   export default {
-  mounted(){
+  onLoad(){
     let _this = this;
 
     mpvue.setStorageSync('check',1)
-    _this.check = 1;
 
     let member = this.getQuery().uid || 0;
       (member && mpvue.setStorageSync('member', member)) || mpvue.setStorageSync('member', null)
@@ -69,7 +68,7 @@
   data () {
     return {
       type: 1,
-      check: mpvue.getStorageSync('check'),
+      check: 1,
       islogin: 0,
       lists : [],
       isIphoneX: this.globalData.isIphoneX //适配iphonex
