@@ -36,17 +36,23 @@
   import bottomnav from '@/components/footer.vue';
 
   export default {
-  onLoad(){
-    mpvue.setStorageSync('check',0)
+  mounted(){
     let _this = this;
-      let member = this.getQuery().uid || 0;
+
+    mpvue.setStorageSync('check',1)
+    _this.check = 1;
+
+    let member = this.getQuery().uid || 0;
       (member && mpvue.setStorageSync('member', member)) || mpvue.setStorageSync('member', null)
       _this.$net.post({
         url: 'index',
         data: {}
       }).then(res => {
         _this.lists = res.data;
-        res.data.check && mpvue.setStorageSync('check',1) && (_this.check = 1)
+        if(res.data.check){
+          mpvue.setStorageSync('check',0)
+          _this.check = 0
+        }
 
       })
       _this.$net.post({
